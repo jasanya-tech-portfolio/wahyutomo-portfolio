@@ -1,11 +1,13 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use App\Traits\BaseModelSoftDeleteDefault;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
+    use BaseModelSoftDeleteDefault;
     /**
      * Run the migrations.
      */
@@ -15,9 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 128);
             $table->string('desc', 255)->nullable();
-            $table->boolean('is_active')->default(true);
-            $table->softDeletes();
-            $table->timestamps();
+            $this->base($table);
         });
     }
 
