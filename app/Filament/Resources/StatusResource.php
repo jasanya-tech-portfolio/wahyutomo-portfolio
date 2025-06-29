@@ -2,45 +2,54 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\StatusResource\Pages;
-use App\Filament\Resources\StatusResource\RelationManagers;
-use App\Models\Status;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Status;
+use Filament\Forms\Form;
+use App\Models\StatusType;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\StatusResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\StatusResource\RelationManagers;
 
 class StatusResource extends Resource
 {
     protected static ?string $model = Status::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-check-circle';
+
+    protected static ?string $navigationGroup = 'Status Management';
+
+    protected static ?string $navigationLabel = 'Status';
+
+    protected static ?string $label = 'Status';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('status_type_id')
+                Select::make('status_type_id')
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('name')
+                    ->label('Status Type')
+                    ->options(StatusType::all()->pluck('name', 'id'))
+                    ->columnSpan(2),
+                TextInput::make('name')
                     ->required()
-                    ->maxLength(128),
-                Forms\Components\TextInput::make('desc')
-                    ->maxLength(255),
-                Forms\Components\Toggle::make('active')
+                    ->maxLength(128)
+                    ->columnSpan(2),
+                Textarea::make('desc')
+                    ->label('Description')
+                    ->maxLength(255)
+                    ->columnSpan(2),
+                Toggle::make('active')
                     ->required(),
-                Forms\Components\TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                Forms\Components\TextInput::make('updated_by')
-                    ->numeric(),
-                Forms\Components\TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 
@@ -48,24 +57,24 @@ class StatusResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('status_type_id')
-                    ->numeric()
+                TextColumn::make('statusType.name')
+                    ->label('Status Type')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('name')
+                    ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('desc')
+                    ->label('Description')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('desc')
-                    ->searchable(),
-                Tables\Columns\IconColumn::make('active')
+                IconColumn::make('active')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -84,6 +93,7 @@ class StatusResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
