@@ -1,15 +1,10 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        @vite('resources/css/app.css')
-    </head>
-    <body>
+@extends('layouts.base')
 
-        <h1 class="font-bold text-4xl">
-            Hello wahyu!
-        </h1>
+@section('title', 'Home')
 
-    </body>
-</html>
+@section('content')
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-4">Selamat Datang!</h1>
+        <p class="text-gray-700 text-lg">Ini adalah halaman beranda dari portfolio Laravel Tailwind kamu.</p>
+    </div>
+@endsection
