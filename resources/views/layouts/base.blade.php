@@ -11,7 +11,7 @@
     @include('components.navbar')
 
     {{-- Page Content --}}
-    <main class="min-h-screen py-10">
+    <main class="min-h-screen py-10 px-5">
         @yield('content')
     </main>
 
