@@ -7,7 +7,12 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-3 lg:py-5 item-center justify-center">
         <div class="py-3 order-1 md:order-2 lg:order-2">
             <div class="flex items-center justify-center h-full">
-                <img src="{{ asset('images/profile.jpg') }}" alt="Profile Image" class="w-[370px] h-auto rounded shadow-lg hover:shadow-xl">
+                <img src="{{ asset('images/profile.jpg') }}"
+                    alt="Profile Image"
+                    class="w-[370px] h-auto rounded 
+                    shadow-[0_0_25px_rgba(245,158,11,0.7)] 
+                    hover:shadow-[0_0_40px_rgba(245,158,11,0.9)] 
+                    transition-shadow duration-300 ease-in-out">
             </div>
         </div>
         <div class="text-gray-950 flex flex-col justify-center px-2 lg:px-3 order-2 md:order-2 lg:order-1 text-center lg:text-left">
@@ -23,5 +28,5 @@
         </div>
     </div>
 
-    
+
 @endsection
