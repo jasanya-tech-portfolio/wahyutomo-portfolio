@@ -1,7 +1,7 @@
 <footer class="bg-white max-h-[300px] mt-10 py-6">
     <div class="flex flex-col items-center space-y-4">
         <!-- Icon Media Sosial -->
-        <div class="flex space-x-6 text-gray-700">
+        <div class="flex space-x-6 text-gray-700 mt-3">
             <!-- Facebook -->
             <a href="#" class="[&>svg]:h-7 [&>svg]:w-7">
                 <!-- Facebook SVG -->
