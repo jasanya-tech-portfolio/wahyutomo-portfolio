@@ -14,7 +14,9 @@ use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -91,37 +93,30 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('category_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('client_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('tools_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('thumbnail')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('start_project')
+                TextColumn::make('category.name')
+                    ->label('Category'),
+                TextColumn::make('client.name')
+                    ->label('Client'),
+                TextColumn::make('tools.name')
+                    ->label('Tools'),
+                ImageColumn::make('thumbnail'),
+                ImageColumn::make('image'),
+                TextColumn::make('start_project')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('end_project')
+                TextColumn::make('end_project')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('status_id')
-                    ->numeric()
+                TextColumn::make('status.name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
