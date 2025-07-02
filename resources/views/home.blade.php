@@ -18,7 +18,7 @@
             </div>
             <div class="text-gray-900 flex flex-col justify-center px-2 lg:px-3 order-2 md:order-2 lg:order-1 text-center lg:text-left">
                 <h1 class="text-4xl lg:text-[44px] font-medium py-5 drop-shadow-2xl items-center justify-center font-mono">
-                    Hi, I am <span class="font-black text-4xl lg:text-[48px]">Wahyu Dwi Utomo,</span>
+                    Hi, I am <span class="font-black text-4xl lg:text-[48px]">{{App\Helpers\SettingHelper::getSetting('name')}}</span>
                     <br>
                     <span class="text-amber-600 text-3xl lg:text-5xl">Software Engineer</span>
                 </h1>
