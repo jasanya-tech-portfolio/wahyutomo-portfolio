@@ -2,44 +2,79 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SettingResource\Pages;
-use App\Filament\Resources\SettingResource\RelationManagers;
-use App\Models\Setting;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Status;
+use App\Models\Setting;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SettingResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SettingResource\RelationManagers;
 
 class SettingResource extends Resource
 {
     protected static ?string $model = Setting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-key';
+
+    protected static ?string $navigationGroup = 'Content Management';
+
+    protected static ?string $navigationLabel = 'Setting';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('key')
+                TextInput::make('key')
                     ->required()
-                    ->maxLength(128),
-                Forms\Components\Textarea::make('value')
-                    ->required()
+                    ->maxLength(128)
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('status_id')
+                Select::make('type')
+                    ->label('Tipe Input')
+                    ->options([
+                        'Textarea' => "Text Area",
+                        'RichEditor' => 'Editor Teks',
+                        'UploadImage' => 'Unggah Gambar',
+                    ])
+                    ->default('RichEditor')
+                    ->afterStateUpdated(function (callable $set) {
+                        // $set('value', null);
+                    })
+                    ->reactive()
+                    ->columnSpanFull(),
+                RichEditor::make('value.RichEditor')
+                    ->label('Value (Rich Editor)')
+                    ->columnSpanFull()
+                    ->hidden(fn ($get) => $get('type') !== 'RichEditor'),
+
+                Textarea::make('value.Textarea')
+                    ->label('Value (Text Area)')
+                    ->autosize()
+                    ->columnSpanFull()
+                    ->hidden(fn ($get) => $get('type') !== 'Textarea'),
+
+                FileUpload::make('value.UploadImage')
+                    ->label('Unggah Gambar')
+                    ->image()
+                    ->directory('setting')
+                    ->columnSpanFull()
+                    ->hidden(fn ($get) => $get('type') !== 'UploadImage'),
+
+                Select::make('status_id')
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                Forms\Components\TextInput::make('updated_by')
-                    ->numeric(),
-                Forms\Components\TextInput::make('deleted_by')
-                    ->numeric(),
+                    ->label('Status')
+                    ->searchable()
+                    ->columnSpanFull()
+                    ->options(Status::where('status_type_id', 1)->pluck('name', 'id')),
             ]);
     }
 
@@ -47,20 +82,24 @@ class SettingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('key')
+                TextColumn::make('key')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('status_id')
-                    ->numeric()
+                TextColumn::make('type')
+                    ->searchable(),
+                TextColumn::make('value')
+                    ->html()
+                    ->limit(100),
+                TextColumn::make('status.name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by")
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by")
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -79,6 +118,7 @@ class SettingResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
