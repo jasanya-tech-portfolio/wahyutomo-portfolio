@@ -10,3 +10,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/cek-setting', function () {
+    return \App\Helpers\SettingHelper::getSetting('address');
+});
+
