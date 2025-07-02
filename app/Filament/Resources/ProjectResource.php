@@ -2,16 +2,26 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
-use App\Models\Project;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Tools;
+use App\Models\Client;
+use App\Models\Status;
+use App\Models\Project;
+use App\Models\Category;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ProjectResource\RelationManagers;
 
 class ProjectResource extends Resource
 {
@@ -23,42 +33,57 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('category_id')
+                Section::make()
+                    ->columns(3)
+                    ->schema([
+                        Select::make('category_id')
+                            ->required()
+                            ->label('Category')
+                            ->searchable()
+                            ->options(Category::all()->pluck('name', 'id')),
+                        Select::make('client_id')
+                            ->required()
+                            ->label('Client')
+                            ->searchable()
+                            ->options(Client::all()->pluck('name', 'id')),
+                        Select::make('tools_id')
+                            ->required()
+                            ->label('Tools')
+                            ->searchable()
+                            ->options(Tools::all()->pluck('name', 'id')),
+                    ]),
+                FileUpload::make('thumbnail')
+                    ->label('Thumbnail')
+                    ->image()
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('client_id')
+                    ->directory('project')
+                    ->columnSpanFull(),
+                TextInput::make('name')
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('tools_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('thumbnail')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('name')
-                    ->required()
+                    ->label('Name')
+                    ->columnSpanFull()
                     ->maxLength(128),
-                Forms\Components\Textarea::make('body')
+                RichEditor::make('body')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
+                FileUpload::make('image')
                     ->image()
+                    ->multiple()
+                    ->directory('project')
+                    ->columnSpanFull()
                     ->required(),
-                Forms\Components\DatePicker::make('start_project')
-                    ->required(),
-                Forms\Components\DatePicker::make('end_project')
-                    ->required(),
-                Forms\Components\TextInput::make('status_id')
+                DatePicker::make('start_project')
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('created_by')
+                    ->native(false),
+                DatePicker::make('end_project')
                     ->required()
-                    ->numeric()
-                    ->default(1),
-                Forms\Components\TextInput::make('updated_by')
-                    ->numeric(),
-                Forms\Components\TextInput::make('deleted_by')
-                    ->numeric(),
+                    ->native(false),
+                Select::make('status_id')
+                    ->required()
+                    ->label('Status')
+                    ->columnSpanFull()
+                    ->searchable()
+                    ->options(Status::all()->pluck('name', 'id')),
             ]);
     }
 
