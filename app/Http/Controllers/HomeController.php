@@ -21,6 +21,6 @@ class HomeController extends Controller
             ->limit(2)
             ->get();
         
-        return view("pages.home", compact('tools'));
+        return view("pages.home", compact('tools', 'blogs'));
     }
 }
