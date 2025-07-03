@@ -38,4 +38,7 @@
 
     {{-- Card Tools --}}
     <x-card.tools :tools="$tools" />
+
+    {{-- Card Blog --}}
+    <x-card.blog :blogs="$blogs" />
 @endsection
