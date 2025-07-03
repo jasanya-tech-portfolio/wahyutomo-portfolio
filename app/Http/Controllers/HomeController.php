@@ -12,6 +12,7 @@ class HomeController extends Controller
     {
         //ambil data tools
         $tools = Tools::where('status_id', 1)
+            ->limit(6)
             ->get();
         
         return view("pages.home", compact('tools'));
