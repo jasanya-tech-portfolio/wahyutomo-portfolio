@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         //ambil data blog
         $blogs = Blog::where('status_id', 1)
-            ->limit(2)
+            ->limit(3)
             ->get();
         
         return view("pages.home", compact('tools', 'blogs'));
