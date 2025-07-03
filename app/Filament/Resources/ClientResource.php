@@ -37,7 +37,7 @@ class ClientResource extends Resource
                 FileUpload::make('logo')
                     ->image()
                     ->label('Tools Logo')
-                    ->directory('logo client')
+                    ->directory('client')
                     ->columnSpanFull()
                     ->required(),
                 TextInput::make('name')

@@ -37,7 +37,7 @@ class ToolsResource extends Resource
                 FileUpload::make('logo')
                     ->image()
                     ->label('Tools Logo')
-                    ->directory('logo tools')
+                    ->directory('tools')
                     ->columnSpanFull()
                     ->required(),
                 TextInput::make('name')
