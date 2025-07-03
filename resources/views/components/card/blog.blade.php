@@ -1,5 +1,5 @@
 <div class="bg-gray-200">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 py-12 font-[poppins]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-12 font-[poppins]">
         @foreach ($blogs as $blog)
             <div class="bg-white w-[418px] h-[295px] mx-auto shadow-sm hover:shadow-lg">
                 {{-- Title --}}
