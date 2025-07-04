@@ -1,9 +1,9 @@
-<div class="bg-white">
+<div class="bg-white py-10 px-10">
     <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-medium text-center pt-10 pb-4">
         Recent Blogs
     </h1>
     <div class="h-[5px] w-[150px] bg-amber-600 mx-auto"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 py-12 font-[poppins] text-gray-800">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 py-8 font-[poppins] text-gray-800">
         @foreach ($blogs as $blog)
             <div class="bg-white w-[418px] h-[280px] mx-auto my-auto shadow-sm hover:shadow-lg border-gray-300 hover:border-2">
                 {{-- Title --}}
