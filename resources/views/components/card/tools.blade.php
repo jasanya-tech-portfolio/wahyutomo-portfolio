@@ -1,10 +1,10 @@
- <div class="bg-white my-10">
+<div class="bg-gray-100 py-10 px-10">
     <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-medium text-center pt-10 pb-4">
         My Tools
     </h1>
     <div class="h-[5px] w-[150px] bg-amber-600 mx-auto">
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 py-8">
         @foreach ($tools as $tool)
             <div class="bg-white w-[300px] h-[200px] mx-auto my-auto
                 shadow-[0_0_25px_rgba(245,158,11,0.7)] 
