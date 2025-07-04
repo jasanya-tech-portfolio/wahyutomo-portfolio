@@ -1,4 +1,4 @@
-<div class="bg-gray-100">
+<div class="bg-white">
     <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-medium text-center pt-10 pb-4">
         Recent Blogs
     </h1>
