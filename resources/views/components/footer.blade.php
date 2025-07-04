@@ -30,8 +30,10 @@
         </div>
 
         <!-- Teks Copyright -->
-        <p class="text-sm text-gray-600 text-center">
-            Copyright &copy;2025 By WahyuTomo. All rights reserved.
-        </p>
+        <div class="w-[280px] lg:w-[500px]">
+            <p class="text-sm text-gray-600 text-center font-[poppins]">
+                Copyright &copy;2025 By WahyuTomo. All rights reserved.
+            </p>
+        </div>
     </div>
 </footer>
