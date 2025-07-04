@@ -5,7 +5,7 @@
 @section('content')
     {{-- hero section --}}
     {{-- <div class="bg-white py-10 px-10 rounded-b-4xl"> --}}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-3 lg:py-5 item-center justify-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-3 lg:py-5 item-center justify-center mt-[64px]">
         <div class="py-3 order-1 md:order-2 lg:order-2">
             <div class="flex items-center justify-center h-full">
                 <img src="{{ asset('images/profile.jpg') }}"
