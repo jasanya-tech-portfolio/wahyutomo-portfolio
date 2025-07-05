@@ -5,6 +5,12 @@
 @section('content')
     {{-- hero section --}}
     <div class="py-10 px-10 lg:py-13 lg:px-12 mt-[64px]">
+        <!-- Background Pattern -->
+        {{-- <div class="absolute inset-0">
+            <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+                
+            </div>
+        </div> --}}
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:py-5 item-center justify-center">
             <div class="py-3 order-1 md:order-2 lg:order-2">
                 <div class="flex items-center justify-center h-full">
