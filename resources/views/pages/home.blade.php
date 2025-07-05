@@ -14,7 +14,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:py-5 item-center justify-center">
             <div class="py-3 order-1 md:order-2 lg:order-2">
                 <div class="flex items-center justify-center h-full">
-                    <img src="{{ asset('images/profile.jpg') }}"
+                    <img src="{{App\Helpers\BannerHelper::getBannerImageUrl('fotohero')}}"
                         alt="Profile Image"
                         class="w-[370px] h-auto rounded 
                         shadow-[0_0_25px_rgba(245,158,11,0.7)] 
