@@ -1,4 +1,4 @@
-<nav id="navbar" class="bg-white p-2 fixed top-0 left-0 right-0 z-50">
+<nav id="navbar" class="bg-white/75 p-2 fixed top-0 left-0 right-0 z-50">
     {{-- Logo --}}
     <div class="flex justify-end items-right px-4">
         {{-- Hamburger Button --}}
