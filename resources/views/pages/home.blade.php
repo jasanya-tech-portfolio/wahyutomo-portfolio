@@ -19,7 +19,7 @@
                         class="w-[370px] h-auto rounded 
                         shadow-[0_0_25px_rgba(245,158,11,0.7)] 
                         hover:shadow-[0_0_40px_rgba(245,158,11,0.9)] 
-                        transition-shadow duration-300 ease-in-out">
+                        transition-shadow duration-300 ease-in-out animate-(--animate-float)">
                 </div>
             </div>
             <div class="text-gray-900 flex flex-col justify-center px-2 lg:px-3 order-2 md:order-2 lg:order-1 text-center lg:text-left">
