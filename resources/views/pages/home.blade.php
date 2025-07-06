@@ -42,9 +42,13 @@
                     <br>
                     <span class="text-amber-600 text-3xl lg:text-5xl">{{App\Helpers\SettingHelper::getSetting('hero title')}}</span>
                 </h1>
-                <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light">
-                    {{App\Helpers\SettingHelper::getSetting('text hero')}}
-                </h3>
+                <div class="flex justify-center lg:justify-start">
+                    <div class="w-[380px] md:w-[550px] lg:w-[680px]">
+                        <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light">
+                            {{App\Helpers\SettingHelper::getSetting('text hero')}}
+                        </h3>
+                    </div>
+                </div>
 
                 {{-- Tombol CV --}}
                 <div class="py-5">
