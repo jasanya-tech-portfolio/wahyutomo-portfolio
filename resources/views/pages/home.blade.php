@@ -4,14 +4,10 @@
 
 @section('content')
     {{-- hero section --}}
-    <div class="py-10 px-10 lg:py-13 lg:px-12 mt-[64px]">
-        <!-- Background Pattern -->
-        {{-- <div class="absolute inset-0">
-            <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-                
-            </div>
-        </div> --}}
+    <div class="py-10 px-5 lg:py-13 lg:px-12 mt-[64px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:py-5 item-center justify-center">
+            
+            {{-- Foto Hero --}}
             <div class="py-3 order-1 md:order-2 lg:order-2">
                 <div class="flex items-center justify-center h-full">
                     <img src="{{App\Helpers\BannerHelper::getBannerImageUrl('fotohero')}}"
@@ -22,13 +18,31 @@
                         transition-shadow duration-300 ease-in-out animate-(--animate-float)">
                 </div>
             </div>
-            <div class="text-gray-900 flex flex-col justify-center px-2 lg:px-3 order-2 md:order-2 lg:order-1 text-center lg:text-left">
+            
+            {{-- Text Hero --}}
+            <div class="text-gray-900 flex flex-col justify-center px-2 lg:px-3 order-2 md:order-2 lg:order-1 text-center lg:text-left font-[poppins]">
+                
+                {{-- Ping Bottom --}}
+                <div class="flex justify-center lg:justify-start">
+                    <div class="inline-flex items-center gap-2 bg-amber-100 px-4 py-2 rounded-full text-sm text-amber-600 font-semibold hover:shadow-sm max-w-[220px]">
+                        <!--Ikon ping -->
+                        <div class="relative flex items-center justify-center w-4 h-4">
+                            <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                            <span class="relative inline-flex w-3 h-3 rounded-full bg-amber-600"></span>
+                        </div>
+                        
+                        <!-- Teks -->
+                        Remote Worker
+                    </div>
+                </div>
+
+
                 <h1 class="text-4xl lg:text-[44px] font-medium py-5 drop-shadow-2xl items-center justify-center font-mono">
                     <span class="font-black text-4xl lg:text-[48px]">{{App\Helpers\SettingHelper::getSetting('name')}}</span>
                     <br>
                     <span class="text-amber-600 text-3xl lg:text-5xl">{{App\Helpers\SettingHelper::getSetting('hero title')}}</span>
                 </h1>
-                <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light font-[poppins]">
+                <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light">
                     {{App\Helpers\SettingHelper::getSetting('text hero')}}
                 </h3>
 
@@ -37,7 +51,7 @@
                     <a 
                         href="{{ App\Helpers\SettingHelper::getSetting('cv') }}" 
                         target="_blank" 
-                        class="inline-flex items-center gap-3 font-[poppins] text-amber-600 text-lg bg-white py-2 px-6 rounded-3xl shadow hover:shadow-lg max-w-[320px] h-[70px] border-2 border-amber-600 font-semibold"
+                        class="inline-flex items-center gap-3 text-amber-600 text-lg bg-white py-2 px-6 rounded-3xl shadow hover:shadow-lg max-w-[320px] h-[70px] border-2 border-amber-600 font-semibold"
                     >
                         <!-- Lingkaran dengan ikon di dalamnya -->
                         <div class="bg-amber-100 p-2 rounded-full">
