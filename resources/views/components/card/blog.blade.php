@@ -1,8 +1,27 @@
 <div class="bg-white py-10 px-10">
-    <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-medium text-center pt-10 pb-4">
-        Recent Blogs
+
+    {{-- Ping Bottom --}}
+    <div class="flex justify-center pt-10">
+        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-amber-600 font-semibold shadow-sm hover:shadow-md max-w-[220px] border-2 border-amber-100">
+            <!--Ikon ping -->
+            <div class="relative flex items-center justify-center w-4 h-4">
+                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex w-3 h-3 rounded-full bg-amber-600"></span>
+            </div>
+            
+            <!-- Teks -->
+            Featured Posts
+        </div>
+    </div>
+
+    <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-semibold text-center py-6">
+        Recent Posts
     </h1>
-    <div class="h-[5px] w-[150px] bg-amber-600 mx-auto"></div>
+
+    <h3 class="text-sm md:text-lg text-gray-700 font-[poppins] font-medium text-center">
+        {{App\Helpers\SettingHelper::getSetting('text blog')}}
+    </h3>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 py-8 font-[poppins] text-gray-800">
         @foreach ($blogs as $blog)
             <div class="bg-white w-[418px] h-[280px] mx-auto my-auto shadow-sm hover:shadow-lg border-gray-300 hover:border-2">
