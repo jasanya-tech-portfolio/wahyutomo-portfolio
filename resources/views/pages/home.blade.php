@@ -12,7 +12,7 @@
                 <div class="flex items-center justify-center h-full">
                     <img src="{{App\Helpers\BannerHelper::getBannerImageUrl('fotohero')}}"
                         alt="Profile Image"
-                        class="w-[370px] h-auto rounded 
+                        class="w-[370px] lg:w-[400px] h-auto rounded 
                         shadow-[0_0_25px_rgba(245,158,11,0.7)] 
                         hover:shadow-[0_0_40px_rgba(245,158,11,0.9)] 
                         transition-shadow duration-300 ease-in-out motion-preset-seesaw motion-duration-700">
