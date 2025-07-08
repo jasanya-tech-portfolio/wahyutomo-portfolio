@@ -51,7 +51,7 @@
                 </div>
 
                 {{-- Wrapper untuk dua tombol --}}
-                <div class="flex flex-wrap gap-4 py-5">
+                <div class="flex flex-col sm:flex-row gap-4 py-5 items-center">
                     
                     {{-- Tombol Let's Talk --}}
                     <a 
