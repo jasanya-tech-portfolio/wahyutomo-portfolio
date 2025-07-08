@@ -50,6 +50,29 @@
                     </div>
                 </div>
 
+                {{-- Tombol Let's Talk --}}
+                <div class="py-5">
+                    <a 
+                        href="mailto:{{ App\Helpers\SettingHelper::getSetting('email') }}" 
+                        target="_blank" 
+                        class="inline-flex items-center gap-3 text-blue-600 text-lg bg-white py-2 px-6 rounded-3xl shadow hover:shadow-lg max-w-[320px] h-[70px] border-2 border-blue-600 font-semibold"
+                    >
+
+                        <!-- Teks -->
+                        Let's Talk
+
+                        <!-- Lingkaran dengan ikon di dalamnya -->
+                        <div class="bg-blue-100 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+                                viewBox="0 0 24 24" stroke-width="1.5" 
+                                stroke="currentColor" 
+                                class="w-6 h-6 text-blue-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
                 {{-- Tombol CV --}}
                 <div class="py-5">
                     <a 
