@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>@yield('title', 'My App')</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
     @vite('resources/css/app.css')
 </head>
 <body class="bg-white text-gray-900">

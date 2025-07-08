@@ -37,14 +37,14 @@
                 </div>
 
 
-                <h1 class="text-4xl lg:text-[44px] font-medium py-5 drop-shadow-2xl items-center justify-center font-mono">
-                    <span class="font-black text-4xl lg:text-[48px]">{{App\Helpers\SettingHelper::getSetting('name')}}</span>
+                <h1 class="text-4xl lg:text-[44px] font-medium py-5 drop-shadow-2xl items-center justify-center font-[Caveat]">
+                    <span class="font-black text-4xl lg:text-5xl">{{App\Helpers\SettingHelper::getSetting('name')}}</span>
                     <br>
-                    <span class="text-amber-600 text-3xl lg:text-5xl">{{App\Helpers\SettingHelper::getSetting('hero title')}}</span>
+                    <span class="text-amber-600 text-3xl lg:text-6xl">{{App\Helpers\SettingHelper::getSetting('hero title')}}</span>
                 </h1>
                 <div class="flex justify-center lg:justify-start">
                     <div class="w-[380px] md:w-[550px] lg:w-[680px]">
-                        <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light">
+                        <h3 class="py-3 text-sm lg:text-lg text-gray-800 font-light">
                             {{App\Helpers\SettingHelper::getSetting('text hero')}}
                         </h3>
                     </div>
