@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-semibold text-center py-6">
+    <h1 class="text-4xl md:text-5xl text-gray-800 font-[Caveat] font-semibold text-center py-6">
         Recent Posts
     </h1>
 
