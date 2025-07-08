@@ -82,5 +82,5 @@
     <x-card.blog :blogs="$blogs" />
 
     {{-- Card Blog --}}
-    <x-card.blog :project="$project" />
+    <x-card.blog :project="$projects" />
 @endsection
