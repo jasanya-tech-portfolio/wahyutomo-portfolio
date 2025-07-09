@@ -19,4 +19,9 @@ class Tools extends Model
     {
         return $this->belongsTo(Status::class, 'status_id');
     }
+
+    public function project()
+    {
+        return $this->belongsToMany(Project::class, 'project_tools', 'tools_id', 'project_id');
+    }
 }

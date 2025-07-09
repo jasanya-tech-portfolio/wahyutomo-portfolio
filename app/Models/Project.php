@@ -29,7 +29,7 @@ class Project extends Model
 
     public function tools()
     {
-        return $this->belongsTo(Tools::class, 'tools_id');
+        return $this->belongsTo(Tools::class, 'project_tools', 'project_id', 'tools_id');
     }
 
     public function category()
