@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("scroll", function () {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > 10) {
-        navbar.classList.add("shadow-md");
+        navbar.classList.add("shadow-md", "border-2", "border-b-gray-500");
     } else {
-        navbar.classList.remove("shadow-md");
+        navbar.classList.remove("shadow-md", "border-2", "border-b-gray-500");
     }
 });
