@@ -42,7 +42,7 @@ class ProjectResource extends Resource
                 Section::make()
                     ->columns(3)
                     ->schema([
-                        Select::make('categoris')
+                        Select::make('category')
                             ->multiple()
                             ->relationship('category', 'name')
                             ->label('Category')
@@ -63,11 +63,22 @@ class ProjectResource extends Resource
                             ->label('Client')
                             ->searchable()
                             ->options(Client::all()->pluck('name', 'id')),
-                        Select::make('tools_id')
-                            ->required()
+                        Select::make('tools')
+                            ->multiple()
+                            ->relationship('tools', 'name')
                             ->label('Tools')
                             ->searchable()
-                            ->options(Tools::all()->pluck('name', 'id')),
+                            ->options(Tools::limit(5)->pluck('name', 'id'))
+                            ->getSearchResultsUsing(function (string $search) {
+                                return Tools::where('name', 'like', "%{$search}%")
+                                    ->limit(5)
+                                    ->pluck('name', 'id')
+                                    ->toArray();
+                            })
+                            ->getOptionLabelUsing(function ($value) {
+                                return Tools::find($value)?->name;
+                            })
+                            ->required(),
                     ]),
                 FileUpload::make('thumbnail')
                     ->label('Thumbnail')
