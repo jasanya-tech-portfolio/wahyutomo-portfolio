@@ -34,6 +34,6 @@ class Project extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsToMany(Category::class, 'project_category', 'project_id', 'category_id');
     }
 }
