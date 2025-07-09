@@ -111,7 +111,7 @@ class ProjectResource extends Resource
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('category.name')
+                TextColumn::make('categories.name')
                     ->label('Category'),
                 TextColumn::make('client.name')
                     ->label('Client'),
