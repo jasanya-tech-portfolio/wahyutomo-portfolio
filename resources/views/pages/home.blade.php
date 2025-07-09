@@ -99,5 +99,5 @@
     <x-card.blog :blogs="$blogs" />
 
     {{-- Card Blog --}}
-    <x-card.project :project="$projects" />
+    <x-card.project :projects="$projects" />
 @endsection

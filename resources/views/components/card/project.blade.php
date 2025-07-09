@@ -22,13 +22,14 @@
         {{App\Helpers\SettingHelper::getSetting('text project')}}
     </h3>
 
+    {{-- Card Project --}}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 py-8 font-[poppins] text-gray-800">
-        {{-- @foreach ($blogs as $blog) --}}
-            <div class="bg-white w-[418px] h-[280px] mx-auto my-auto shadow-sm hover:shadow-lg border-gray-300 hover:border-2">
-                {{-- Title --}}
+        @foreach ($projects as $project)
+            <div class="bg-white w-[345px] h-[718px] mx-auto my-auto shadow-sm hover:shadow-lg border-green-300 border-2 hover:border-0 rounded-xl">
+                {{-- Name --}}
                 <div class="px-4 pt-6 pb-2 w-[374px] h-[85px]">
                     <h1 class="text-[22px] font-semibold hover:underline">
-                        {{-- {{ \Illuminate\Support\Str::limit($blog->title, 50, '...') }} --}}
+                        {{ \Illuminate\Support\Str::limit($project->name, 50, '...') }}
                     </h1>
                 </div>
                 {{-- Date & Category--}}
@@ -42,6 +43,7 @@
                     {{-- <p class="text-sm line-clamp-3">{{ strip_tags($blog->body) }}</p> --}}
                 </div>
             </div>
-        {{-- @endforeach --}}
+        @endforeach
     </div>
+
 </div>
