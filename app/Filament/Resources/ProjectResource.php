@@ -42,11 +42,21 @@ class ProjectResource extends Resource
                 Section::make()
                     ->columns(3)
                     ->schema([
-                        Select::make('categories') // harus sama dengan nama relasi
+                        Select::make('categories')
                             ->multiple()
                             ->relationship('categories', 'name')
-                            ->label('Categories')
+                            ->label('Category')
                             ->searchable()
+                            ->options(Category::limit(5)->pluck('name', 'id'))
+                            ->getSearchResultsUsing(function (string $search) {
+                                return Category::where('name', 'like', "%{$search}%")
+                                    ->limit(5)
+                                    ->pluck('name', 'id')
+                                    ->toArray();
+                            })
+                            ->getOptionLabelUsing(function ($value) {
+                                return Category::find($value)?->name;
+                            })
                             ->required(),
                         Select::make('client_id')
                             ->required()
