@@ -129,6 +129,10 @@ class ProjectResource extends Resource
                     ->label('Tools'),
                 ImageColumn::make('thumbnail'),
                 ImageColumn::make('image'),
+                TextColumn::make('body')
+                    ->searchable()
+                    ->html()
+                    ->limit(50),
                 TextColumn::make('start_project')
                     ->date()
                     ->sortable(),
