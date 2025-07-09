@@ -32,7 +32,7 @@ class Project extends Model
         return $this->belongsTo(Tools::class, 'project_tools', 'project_id', 'tools_id');
     }
 
-    public function category()
+    public function categories()
     {
         return $this->belongsToMany(Category::class, 'project_category', 'project_id', 'category_id');
     }

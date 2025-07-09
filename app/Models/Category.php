@@ -25,7 +25,7 @@ class Category extends Model
         return $this->belongsToMany(Blog::class, 'blog_category', 'category_id', 'blog_id');
     }
 
-    public function project()
+    public function projects()
     {
         return $this->belongsToMany(Project::class, 'project_category', 'category_id', 'project_id');
     }
