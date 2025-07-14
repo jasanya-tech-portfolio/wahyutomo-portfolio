@@ -5,6 +5,12 @@
     <title>@yield('title', 'My App')</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    
+    {{-- Template CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+    {{-- Template JS --}}
+    <script src="{{ asset('assets/js/main.js') }}" defer></script>
 
     @vite('resources/css/app.css')
 </head>
