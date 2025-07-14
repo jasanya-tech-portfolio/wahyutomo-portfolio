@@ -1,26 +1,38 @@
-<div class="bg-gray-100 py-10 px-10">
-    <h1 class="text-2xl md:text-3xl text-gray-800 font-[poppins] font-medium text-center pt-10 pb-4">
-        Core Technologies
-    </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 py-8">
+<section class="wrapper !bg-[#ffffff]  wrapper-border">
+    <div class="container pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
+        <p class="text-center !mb-8">Trusted by over 2K+ clients across the world</p>
         @foreach ($tools as $tool)
-            <div class="bg-white w-[300px] h-[200px] mx-auto my-auto
-                shadow-[0_0_25px_rgba(245,158,11,0.7)] 
-                hover:shadow-[0_0_40px_rgba(245,158,11,0.9)] 
-                transition-shadow duration-300 ease-in-out
-                rounded-2xl">
-
-                <!-- logo -->
-                <div class="flex px-6 w-full h-[130px] pt-8">
-                    <img src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }}" class="max-h-full max-w-full object-contain mx-auto">
+            <div class="swiper-container clients !mb-0 relative z-10" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="5000" data-items-xxl="7" data-items-xl="6" data-items-lg="5" data-items-md="4" data-items-xs="2">
+                <div class="swiper">
+                    <div class="swiper-wrapper ticker">
+                        <div class="swiper-slide px-5"><img class="!w-full !h-auto" src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }}"></div>
+                    </div>
+                    <!--/.swiper-wrapper -->
                 </div>
-
-                <!-- name -->
-                <h3 class="font-[poppins] font-medium text-xl px-4 pt-4 text-center">
-                    {{ $tool->name }}
-                </h3>
-                
+                <!-- /.swiper -->
             </div>
         @endforeach
+        <!-- /.swiper-container -->
     </div>
-</div>
+</section>
+<!-- /section -->
+
+<section class="wrapper !bg-[#ffffff] ">
+                  <div class="container pt-20 xl:pt-28 lg:pt-28 md:pt-28 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
+                    <div class="flex flex-wrap mx-[-15px]">
+                      <div class="xl:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
+                        <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400 !text-white !mt-[-1.25rem] xl:!mt-0 lg:!mt-0  xl:-translate-y-2/4 lg:-translate-y-2/4 bg-cover [background-size:100%] bg-[center_center] bg-no-repeat !bg-scroll !relative z-0 before:rounded-[0.4rem] before:bg-[rgba(30,34,40,.4)] before:content-[''] before:block before:absolute before:z-[1] before:w-full before:h-full before:left-0 before:top-0" data-image-src="../../assets/img/photos/bg3.jpg">
+                          <div class="card-body p-6 flex-row text-center xl:!justify-between lg:!justify-between md:!justify-between xl:!flex xl:!items-center lg:!flex lg:!items-center xl:!p-12 lg:!p-12 md:!p-12 xl:!text-left lg:!text-left">
+                            <h3 class="!text-[calc(1.265rem_+_0.18vw)] font-bold xl:!text-[1.4rem] !leading-[1.35] !mb-6 xl:!mb-0 lg:!mb-0 lg:!pr-10 xl:!pr-5 xxl:!pr-32 !text-white">We are trusted by over 5000+ clients. Join them by using our services and grow your business.</h3>
+                            <a href="#" class="btn btn-white !rounded-[50rem]  !mb-0 whitespace-nowrap">Join Us</a>
+                          </div>
+                          <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                      </div>
+                      <!-- /column -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+</section>
+<!-- /section -->
