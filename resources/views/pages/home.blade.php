@@ -92,14 +92,16 @@
         </div>
     </div>
 
-    {{-- Card Tools --}}
-    <x-card.tools :tools="$tools" />
+    <div class="grow shrink-0">
+        {{-- Card Tools --}}
+        <x-card.tools :tools="$tools" />
 
-    {{-- Card Blog --}}
-    <x-card.blog :blogs="$blogs" />
+        {{-- Card Blog --}}
+        <x-card.blog :blogs="$blogs" />
 
-    {{-- Card Blog --}}
-    <x-card.project :projects="$projects" />
+        {{-- Card Blog --}}
+        <x-card.project :projects="$projects" />
+    </div>
 
     <!-- Progress Wrapper -->
     <div class="fixed right-6 bottom-6 flex flex-col items-center space-y-4 z-[9999]">
