@@ -96,6 +96,9 @@
         {{-- Card Tools --}}
         <x-card.tools :tools="$tools" />
 
+        {{-- Card Tools --}}
+        <x-card.count />
+
         {{-- Card Blog --}}
         <x-card.blog :blogs="$blogs" />
 
