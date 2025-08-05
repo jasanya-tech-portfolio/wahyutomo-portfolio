@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         //ambil data tools
         $tools = Tools::where('status_id', 1)
-            ->limit(6)
+            ->limit(8)
             ->get();
 
         //ambil data blog

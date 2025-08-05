@@ -103,7 +103,7 @@
         <x-card.blog :blogs="$blogs" />
 
         {{-- Card Blog --}}
-        <x-card.project :projects="$projects" />
+        <x-card.project :projects="$projects" :tools="$tools" />
     </div>
 
     <!-- Progress Wrapper -->

@@ -48,6 +48,28 @@
                                     24 April 2025
                                 </p>
 
+                                {{-- <section class="flex justify-center wrapper !bg-[#ffffff] wrapper-border mx-auto">
+                                    <div class="container py-4">
+                                        <div class="swiper-container clients !mb-0 relative z-10" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="2000" data-items-xxl="7" data-items-xl="7" data-items-lg="7" data-items-md="4" data-items-xs="2">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper ticker">
+                                            @foreach ($tools->take(5) as $tool)
+                                            <div class="swiper-slide w-auto">
+                                                <div class="flex items-center justify-center space-x-1 bg-white border border-blue-400 rounded-xl px-2 py-2 shadow-sm hover:shadow-md min-w-[100px] mx-1">
+                                                    <img src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }}" class="w-4 h-4 object-contain">
+                                                    <span class="text-xs font-medium text-gray-800">{{ $tool->name }}</span>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                            </div>
+                                            <!--/.swiper-wrapper -->
+                                        </div>
+                                        <!-- /.swiper -->
+                                        </div>
+                                        <!-- /.swiper-container -->
+                                    </div>
+                                </section> --}}
+
                                 <a href="#" class="inline-block mt-2 px-4 py-2 bg-sky-800 text-white text-sm rounded hover:bg-sky-900 transition">
                                     View Project
                                 </a>
