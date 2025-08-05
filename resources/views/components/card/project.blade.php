@@ -23,5 +23,41 @@
     </h3>
 
     {{-- Card Project --}}
+    <div class="px-6 lg:px-24 py-6">
+        <div class="overflow-x-auto hide-scrollbar">
+            <div class="flex space-x-6 w-max mx-auto">
+                {{-- @foreach ( $projects as $project ) --}}
+                    @for ($i = 0; $i < 6; $i++)
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-80 flex-shrink-0">
+                            <img src="https://via.placeholder.com/600x300" alt="Thumbnail" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <span class="text-sm text-gray-500 font-medium">Category {{ $i + 1 }}</span>
+                                <h2 class="text-lg font-semibold mt-1">Project Title {{ $i + 1 }}</h2>
+                                <p class="text-gray-700 text-sm mt-2 line-clamp-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus nec neque vehicula, a rutrum erat varius.
+                                </p>
+                                <a href="#" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition">
+                                    Start Project
+                                </a>
+                            </div>
+                        </div>
+                    @endfor
+                {{-- @endforeach --}}
+            </div>
+        </div>
+    </div>
+
 
 </div>
+
+{{-- Style Buat Card --}}
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
