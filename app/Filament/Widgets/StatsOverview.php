@@ -10,19 +10,19 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         return [
-            Stat::make('Unique views', '192.1k')
-                ->description('32k increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+            Stat::make('Jumlah Postingan', '6')
+                ->description('Post')
+                ->descriptionIcon('heroicon-m-pencil-square')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('success'),
-            Stat::make('Bounce rate', '21%')
-                ->description('7% increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-down')
+            Stat::make('Jumlah Project', '22')
+                ->description('Project')
+                ->descriptionIcon('heroicon-m-building-office-2')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('warning'),
-            Stat::make('Average time on page', '3:12')
-                ->description('3% increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+            Stat::make('Jumlah Client', '12')
+                ->description('Client')
+                ->descriptionIcon('heroicon-m-user-group')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('info'),
         ];
