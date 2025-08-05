@@ -28,16 +28,24 @@
             <div class="flex space-x-6 w-max mx-auto">
                 {{-- @foreach ( $projects as $project ) --}}
                     @for ($i = 0; $i < 6; $i++)
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-80 flex-shrink-0">
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
                             <img src="https://via.placeholder.com/600x300" alt="Thumbnail" class="w-full h-48 object-cover">
                             <div class="p-4">
-                                <span class="text-sm text-gray-500 font-medium">Category {{ $i + 1 }}</span>
-                                <h2 class="text-lg font-semibold mt-1">Project Title {{ $i + 1 }}</h2>
+                                <span class="text-sm text-blue-500 font-medium">Category {{ $i + 1 }}</span>
+                                <h2 class="text-lg font-semibold mt-1">Sistem Informasi E-Learning Berbasis website {{ $i + 1 }}</h2>
+
+                                <h2 class="text-md text-gray-700 font-medium mt-1">PT Pertamina{{ $i + 1 }}</h2>
+
                                 <p class="text-gray-700 text-sm mt-2 line-clamp-3">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus nec neque vehicula, a rutrum erat varius.
                                 </p>
-                                <a href="#" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition">
-                                    Start Project
+
+                                <p class="py-4 text-gray-500">
+                                    24 April 2025
+                                </p>
+
+                                <a href="#" class="inline-block mt-2 px-4 py-2 bg-sky-800 text-white text-sm rounded hover:bg-sky-900 transition">
+                                    View Project
                                 </a>
                             </div>
                         </div>
