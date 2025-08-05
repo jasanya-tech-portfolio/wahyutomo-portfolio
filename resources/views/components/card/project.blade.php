@@ -29,10 +29,14 @@
                 {{-- @foreach ( $projects as $project ) --}}
                     @for ($i = 0; $i < 6; $i++)
                         <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
-                            <img src="https://via.placeholder.com/600x300" alt="Thumbnail" class="w-full h-48 object-cover">
+                            <div class="overflow-hidden rounded-t-lg">
+                                <img src="{{ asset('images/UIUX.png') }}"
+                                    alt="Thumbnail"
+                                    class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-110">
+                            </div>
                             <div class="p-4">
                                 <span class="text-sm text-blue-500 font-medium">Category {{ $i + 1 }}</span>
-                                <h2 class="text-lg font-semibold mt-1">Sistem Informasi E-Learning Berbasis website {{ $i + 1 }}</h2>
+                                <h2 class="py-2 text-lg font-semibold mt-1">Sistem Informasi E-Learning Berbasis website {{ $i + 1 }}</h2>
 
                                 <h2 class="text-md text-gray-700 font-medium mt-1">PT Pertamina{{ $i + 1 }}</h2>
 
