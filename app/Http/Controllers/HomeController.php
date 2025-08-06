@@ -26,7 +26,13 @@ class HomeController extends Controller
         $projects = Project::where('status_id', 1)
             ->limit(3)
             ->get();
-        
-        return view("pages.home", compact('tools', 'blogs', 'projects'));
+
+        $education = [
+        ];
+
+        $experience = [
+        ];
+                
+        return view("pages.home", compact('tools', 'blogs', 'projects', 'experience', 'education'));
     }
 }

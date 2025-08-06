@@ -18,6 +18,9 @@
 
         {{-- Card Blog --}}
         <x-card.project :projects="$projects" :tools="$tools" />
+
+        {{-- Card My Journey --}}
+        <x-card.myjourney :education="$education" :experience="$experience" />
     </div>
 
     <!-- Progress Wrapper -->
