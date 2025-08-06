@@ -21,7 +21,11 @@
 
                     <!-- Badge -->
                     <div class="ml-12">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow text-sm text-gray-700">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-700">
+                            <div class="relative flex items-center justify-center w-5 h-5">
+                                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                                <span class="relative inline-flex w-3 h-3 rounded-full bg-blue-600"></span>
+                            </div>
                             {{ $edu->date_range }}
                         </div>
                     </div>
@@ -30,7 +34,7 @@
                     <div class="ml-12 mt-3">
                         <div class="bg-white p-4 rounded-xl border border-violet-400 shadow hover:shadow-lg transition">
                             <div class="flex items-start gap-4">
-                                <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-10 h-10 object-contain bg-gray-100 p-1">
+                                <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-12 h-12 object-contain p-1">
                                 <div>
                                     <h4 class="font-bold text-gray-900">{{ $edu->institude }}</h4>
                                     <p class="text-violet-600 font-medium">{{ $edu->title }}</p>
@@ -57,12 +61,16 @@
                 <div class="relative group">
                     <!-- Dot -->
                     <div class="absolute left-4 top-2 -translate-x-1/2 w-3 h-3 z-10">
-                        <div class="w-full h-full rounded-full bg-indigo-500 border-2 border-white shadow"></div>
+                        <div class="w-full h-full rounded-full bg-violet-500 border-2 border-white shadow"></div>
                     </div>
 
                     <!-- Badge -->
                     <div class="ml-12">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow text-sm text-gray-700">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-700">
+                            <div class="relative flex items-center justify-center w-5 h-5">
+                                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                                <span class="relative inline-flex w-3 h-3 rounded-full bg-blue-600"></span>
+                            </div>
                             {{ $exp->date_range }}
                         </div>
                     </div>
@@ -71,10 +79,10 @@
                     <div class="ml-12 mt-3">
                         <div class="bg-white p-4 rounded-xl border border-indigo-400 shadow hover:shadow-lg transition">
                             <div class="flex items-start gap-4">
-                                <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->institude }}" class="w-10 h-10 object-contain rounded-full bg-gray-100 p-1">
+                                <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->institute }}" class="w-12 h-12 object-contain p-1">
                                 <div>
-                                    <h4 class="font-bold text-gray-900">{{ $exp->title }}</h4>
-                                    <p class="text-indigo-600 font-medium">{{ $exp->institude }}</p>
+                                    <h4 class="font-bold text-gray-900">{{ $exp->institude }}</h4>
+                                    <p class="text-violet-600 font-medium">{{ $exp->title }}</p>
                                     <p class="text-sm text-gray-600">{{ $exp->desc }}</p>
                                 </div>
                             </div>
