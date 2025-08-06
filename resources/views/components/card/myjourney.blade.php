@@ -1,11 +1,30 @@
-<section class="max-w-7xl mx-auto px- lg:px-10 py-12 font-[Poppins]">
-    <h2 class="text-3xl font-bold text-center mb-2">My Journey</h2>
-    <p class="text-center text-gray-600 mb-10">My journey in the world of technology and programming</p>
+<section class="max-w-7xl mx-auto px-4 lg:px-16 py-12 font-[Poppins]">
+    {{-- Ping Bootom --}}
+    <div class="flex justify-center py-2">
+        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-amber-600 font-semibold shadow-sm hover:shadow-md border-2 border-blue-100">
+            <!--Ikon ping -->
+            <div class="relative flex items-center justify-center w-4 h-4">
+                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex w-3 h-3 rounded-full bg-amber-600"></span>
+            </div>
+            
+            <!-- Teks -->
+            Experience & Education
+        </div>
+    </div>
+
+    <h1 class="text-4xl md:text-5xl text-gray-800 font-[Caveat] font-semibold text-center py-6">
+        My Journey
+    </h1>
+
+    <h3 class="text-sm md:text-lg text-gray-700 font-[poppins] font-medium text-center pb-6">
+        {{App\Helpers\SettingHelper::getSetting('text journey')}}
+    </h3>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
         <!-- Education Column -->
         <div class="relative">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center lg:text-left">Education</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center py-3">Education</h3>
 
             <!-- Vertical Line -->
             <div class="absolute lg:left-4 left-4 top-8 bottom-0 w-0.5 bg-violet-200 z-0"></div>
@@ -50,7 +69,7 @@
 
         <!-- Experience Column -->
         <div class="relative">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center lg:text-left">Experience</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center py-3">Experience</h3>
 
             <!-- Vertical Line -->
             <div class="absolute lg:left-4 left-4 top-8 bottom-0 w-0.5 bg-indigo-200 z-0"></div>
