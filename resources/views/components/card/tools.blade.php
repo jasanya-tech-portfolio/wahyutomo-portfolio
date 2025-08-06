@@ -8,21 +8,21 @@
         </div>
         
         <!-- Teks -->
-        My Technology
+        Core Technologies
     </div>
 </div>
 
 {{-- Tools Logo --}}
 <section class="flex justify-center wrapper !bg-[#ffffff] wrapper-border mx-auto">
-  <div class="container pt-20 xl:pt-20 lg:pt-20 md:pt-20 pb-16">
+  <div class="container py-6">
     <div class="swiper-container clients !mb-0 relative z-10" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="2000" data-items-xxl="7" data-items-xl="7" data-items-lg="7" data-items-md="4" data-items-xs="2">
       <div class="swiper">
         <div class="swiper-wrapper ticker">
           @foreach ($tools as $tool)
-            <div class="swiper-slide px-5 w-auto">
+            <div class="swiper-slide px-6 w-auto font-[poppins]">
               <div class="flex items-center justify-center space-x-2 bg-white border border-blue-400 hover:border-amber-400 rounded-xl px-3 py-3 shadow-md hover:shadow-lg min-w-[160px]">
                   <img src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }}" class="w-10 h-10 object-contain">
-                  <span class="text-base font-semibold text-gray-800">{{ $tool->name }}</span>
+                  <span class="text-sm font-semibold text-gray-800">{{ $tool->name }}</span>
               </div>
             </div>
           @endforeach
