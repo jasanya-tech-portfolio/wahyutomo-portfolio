@@ -8,7 +8,8 @@
                     alt="Profile Image"
                     class="w-[370px] lg:w-[400px] h-auto rounded 
                     shadow-[0_0_40px_rgba(245,158,11,0.7)] 
-                    hover:shadow-[0_0_60px_rgba(245,158,11,0.9)]">
+                    hover:shadow-[0_0_60px_rgba(245,158,11,0.9)]
+                    transform transition duration-300 hover:-translate-y-1">
             </div>
         </div>
         
