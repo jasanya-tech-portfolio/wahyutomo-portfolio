@@ -51,12 +51,12 @@
 
                     <!-- Card -->
                     <div class="ml-12 mt-4">
-                        <div class="bg-white p-4 rounded-xl border border-violet-400 shadow hover:shadow-lg transition max-w-[500px]">
+                        <div class="group bg-white p-4 rounded-xl border-2 border-violet-400 shadow-md transform transition duration-300 hover:-translate-y-1 hover:shadow-lg max-w-[500px]">
                             <div class="flex items-start gap-4">
                                 <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-12 h-12 object-contain p-1 self-center">
                                 <div>
-                                    <h4 class="font-bold text-gray-900 text-[20px] py-1.5">{{ $edu->institude }}</h4>
-                                    <p class="text-violet-600 font-medium">{{ $edu->title }}</p>
+                                    <h4 class="font-bold text-gray-900 text-[20px] group-hover:text-violet-600 transition-colors duration-300">{{ $edu->institude }}</h4>
+                                    <p class="text-violet-600 font-medium pt-[6px]">{{ $edu->title }}</p>
                                     <p class="text-sm text-gray-800">{{ $edu->desc }}</p>
                                 </div>
                             </div>
@@ -96,12 +96,12 @@
 
                     <!-- Card -->
                     <div class="ml-12 mt-4">
-                        <div class="bg-white p-4 rounded-xl border border-indigo-400 shadow hover:shadow-lg transition max-w-[500px]">
+                        <div class="bg-white group p-4 rounded-xl border-2 border-indigo-400 shadow-md transform transition duration-300 hover:-translate-y-1 hover:shadow-lg max-w-[500px]">
                             <div class="flex items-center gap-4">
                                 <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->institute }}" class="w-12 h-12 object-contain p-1 self-center">
                                 <div>
-                                    <h4 class="font-bold text-gray-900 text-[20px] py-1.5">{{ $exp->title }}</h4>
-                                    <p class="text-violet-600 font-medium">{{ $exp->institude }}</p>
+                                    <h4 class="font-bold text-gray-900 text-[20px] group-hover:text-violet-600 transition-colors duration-300">{{ $exp->title }}</h4>
+                                    <p class="text-violet-600 font-medium pt-[6px]">{{ $exp->institude }}</p>
                                     <p class="text-sm text-gray-800">{{ $exp->desc }}</p>
                                 </div>
                             </div>
