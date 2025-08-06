@@ -17,7 +17,7 @@
         My Journey
     </h1>
 
-    <h3 class="text-sm md:text-lg text-gray-700 font-[poppins] font-medium text-center pb-6">
+    <h3 class="text-sm md:text-lg text-gray-700 px-2 font-[poppins] font-medium text-center py-2">
         {{App\Helpers\SettingHelper::getSetting('text journey')}}
     </h3>
 
