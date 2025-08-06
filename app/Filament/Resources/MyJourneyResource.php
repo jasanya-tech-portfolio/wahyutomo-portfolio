@@ -24,7 +24,11 @@ class MyJourneyResource extends Resource
 {
     protected static ?string $model = MyJourney::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+
+    protected static ?string $navigationGroup = 'Content Management';
+    
+    protected static ?string $navigationLabel = 'My Journey';
 
     public static function form(Form $form): Form
     {
