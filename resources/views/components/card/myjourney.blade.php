@@ -50,8 +50,8 @@
                     </div>
 
                     <!-- Card -->
-                    <div class="ml-12 mt-3">
-                        <div class="bg-white p-4 rounded-xl border border-violet-400 shadow hover:shadow-lg transition">
+                    <div class="ml-12 mt-4">
+                        <div class="bg-white p-4 rounded-xl border border-violet-400 shadow hover:shadow-lg transition max-w-[500px]">
                             <div class="flex items-start gap-4">
                                 <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-12 h-12 object-contain p-1">
                                 <div>
@@ -95,8 +95,8 @@
                     </div>
 
                     <!-- Card -->
-                    <div class="ml-12 mt-3">
-                        <div class="bg-white p-4 rounded-xl border border-indigo-400 shadow hover:shadow-lg transition">
+                    <div class="ml-12 mt-4">
+                        <div class="bg-white p-4 rounded-xl border border-indigo-400 shadow hover:shadow-lg transition max-w-[500px]">
                             <div class="flex items-start gap-4">
                                 <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->institute }}" class="w-12 h-12 object-contain p-1">
                                 <div>
