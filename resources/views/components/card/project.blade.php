@@ -1,4 +1,4 @@
-<div class="bg-gray-100">
+<div class="bg-white-100">
 
     {{-- Ping Bottom --}}
     <div class="flex justify-center pt-10">
