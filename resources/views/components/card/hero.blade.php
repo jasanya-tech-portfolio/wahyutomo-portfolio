@@ -67,8 +67,8 @@
             </div>
 
             <div class="flex justify-center lg:justify-start">
-                <div class="w-[380px] md:w-[550px] lg:w-[680px]">
-                    <h3 class="py-3 text-sm lg:text-lg text-gray-700 font-light">
+                <div class="w-[400px] md:w-[550px] lg:w-[680px]">
+                    <h3 class="py-3 text-sm lg:text-lg text-gray-500 font-light">
                         {{App\Helpers\SettingHelper::getSetting('text hero')}}
                     </h3>
                 </div>
