@@ -106,6 +106,10 @@ class ProjectResource extends Resource
                 DatePicker::make('end_project')
                     ->required()
                     ->native(false),
+                TextInput::make('url')
+                    ->label('URL Project')
+                    ->columnSpanFull()
+                    ->maxLength(128),
                 Select::make('status_id')
                     ->required()
                     ->label('Status')
