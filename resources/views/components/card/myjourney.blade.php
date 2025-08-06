@@ -22,7 +22,7 @@
                     <!-- Badge -->
                     <div class="ml-12">
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow text-sm text-gray-700">
-                            {{ $edu->date }}
+                            {{ $edu->date_range }}
                         </div>
                     </div>
 
@@ -30,11 +30,11 @@
                     <div class="ml-12 mt-3">
                         <div class="bg-white p-4 rounded-xl border border-violet-400 shadow hover:shadow-lg transition">
                             <div class="flex items-start gap-4">
-                                <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institution }}" class="w-10 h-10 object-contain bg-gray-100 p-1">
+                                <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-10 h-10 object-contain bg-gray-100 p-1">
                                 <div>
-                                    <h4 class="font-bold text-gray-900">{{ $edu->institution }}</h4>
-                                    <p class="text-violet-600 font-medium">{{ $edu->degree }}</p>
-                                    <p class="text-sm text-gray-600">{{ $edu->major }}</p>
+                                    <h4 class="font-bold text-gray-900">{{ $edu->institude }}</h4>
+                                    <p class="text-violet-600 font-medium">{{ $edu->title }}</p>
+                                    <p class="text-sm text-gray-600">{{ $edu->desc }}</p>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                     <!-- Badge -->
                     <div class="ml-12">
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow text-sm text-gray-700">
-                            {{ $exp->date }}
+                            {{ $exp->date_range }}
                         </div>
                     </div>
 
@@ -71,11 +71,11 @@
                     <div class="ml-12 mt-3">
                         <div class="bg-white p-4 rounded-xl border border-indigo-400 shadow hover:shadow-lg transition">
                             <div class="flex items-start gap-4">
-                                <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->company }}" class="w-10 h-10 object-contain rounded-full bg-gray-100 p-1">
+                                <img src="{{ asset('storage/'.$exp->logo) }}" alt="{{ $exp->institude }}" class="w-10 h-10 object-contain rounded-full bg-gray-100 p-1">
                                 <div>
-                                    <h4 class="font-bold text-gray-900">{{ $exp->position }}</h4>
-                                    <p class="text-indigo-600 font-medium">{{ $exp->company }}</p>
-                                    <p class="text-sm text-gray-600">{{ $exp->description }}</p>
+                                    <h4 class="font-bold text-gray-900">{{ $exp->title }}</h4>
+                                    <p class="text-indigo-600 font-medium">{{ $exp->institude }}</p>
+                                    <p class="text-sm text-gray-600">{{ $exp->desc }}</p>
                                 </div>
                             </div>
                         </div>
