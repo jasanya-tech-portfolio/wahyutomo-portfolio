@@ -40,7 +40,7 @@
 
                     <!-- Badge -->
                     <div class="ml-12">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-700">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-800 border border-gray-100">
                             <div class="relative flex items-center justify-center w-5 h-5">
                                 <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
                                 <span class="relative inline-flex w-3 h-3 rounded-full bg-blue-600"></span>
@@ -55,8 +55,8 @@
                             <div class="flex items-start gap-4">
                                 <img src="{{ asset('storage/'.$edu->logo) }}" alt="{{ $edu->institude }}" class="w-12 h-12 object-contain p-1 self-center">
                                 <div>
-                                    <h4 class="font-bold text-gray-900 text-[20px] py-1.5">{{ $edu->title }}</h4>
-                                    <p class="text-violet-600 font-medium">{{ $edu->institude }}</p>
+                                    <h4 class="font-bold text-gray-900 text-[20px] py-1.5">{{ $edu->institude }}</h4>
+                                    <p class="text-violet-600 font-medium">{{ $edu->title }}</p>
                                     <p class="text-sm text-gray-800">{{ $edu->desc }}</p>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
 
                     <!-- Badge -->
                     <div class="ml-12">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-700">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-md text-sm text-gray-800 border border-gray-100">
                             <div class="relative flex items-center justify-center w-5 h-5">
                                 <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
                                 <span class="relative inline-flex w-3 h-3 rounded-full bg-blue-600"></span>
