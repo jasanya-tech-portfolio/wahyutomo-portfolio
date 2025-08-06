@@ -18,21 +18,21 @@
         Recent Project
     </h1>
 
-    <h3 class="text-sm md:text-lg text-gray-700 font-[poppins] font-medium text-center">
+    <h3 class="text-sm md:text-lg text-gray-700 px-2 font-[poppins] font-medium text-center">
         {{App\Helpers\SettingHelper::getSetting('text project')}}
     </h3>
 
     {{-- Card Project --}}
-    <div class="px-6 lg:px-24 py-6">
+    <div class="px-3 lg:px-24 py-6">
         <div class="overflow-x-auto hide-scrollbar">
             <div class="flex space-x-6 w-max mx-auto">
                 {{-- @foreach ( $projects as $project ) --}}
                     @for ($i = 0; $i < 6; $i++)
-                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-72 lg:w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
                             <div class="overflow-hidden rounded-t-lg">
                                 <img src="{{ asset('images/UIUX.png') }}"
                                     alt="Thumbnail"
-                                    class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-110">
+                                    class="w-full h-40 md:h-48 object-cover transform transition-transform duration-300 hover:scale-110">
                             </div>
                             <div class="p-4">
                                 <span class="text-sm text-blue-500 font-medium">Category {{ $i + 1 }}</span>
