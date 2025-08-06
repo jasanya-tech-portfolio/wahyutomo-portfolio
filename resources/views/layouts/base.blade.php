@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="overflow-x-hidden">
     <head>
         <meta charset="UTF-8">
         <title>@yield('title', 'My App')</title>
@@ -45,7 +45,7 @@
         @include('components.navbar')
 
         {{-- Page Content --}}
-        <main class="min-h-screen">
+        <main class="min-h-screen overflow-x-hidden">
             @yield('content')
         </main>
 
