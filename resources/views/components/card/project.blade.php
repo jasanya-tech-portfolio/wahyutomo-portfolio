@@ -23,7 +23,7 @@
     </h3>
 
     {{-- Card Project --}}
-    <div class="px-3 lg:px-24 py-8">
+    <div class="px-6 lg:px-24 py-8">
         <div class="overflow-x-auto hide-scrollbar">
             <div class="flex space-x-6 w-max mx-auto">
                 {{-- @foreach ( $projects as $project ) --}}
