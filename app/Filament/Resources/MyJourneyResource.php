@@ -2,16 +2,21 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MyJourneyResource\Pages;
-use App\Filament\Resources\MyJourneyResource\RelationManagers;
-use App\Models\MyJourney;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Status;
+use Filament\Forms\Form;
+use App\Models\MyJourney;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\MyJourneyResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\MyJourneyResource\RelationManagers;
 
 class MyJourneyResource extends Resource
 {
@@ -23,35 +28,35 @@ class MyJourneyResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('key')
+                TextInput::make('key')
                     ->required()
                     ->maxLength(32),
-                Forms\Components\TextInput::make('title')
+                TextInput::make('title')
                     ->required()
                     ->maxLength(64),
-                Forms\Components\TextInput::make('logo')
+                FileUpload::make('logo')
+                    ->image()
+                    ->label('My Journey Logo')
+                    ->directory('my-journey')
+                    ->columnSpanFull()
+                    ->required(),
+                TextInput::make('institude')
+                    ->required()
+                    ->maxLength(128)
+                    ->columnSpanFull(),
+                Textarea::make('desc')
+                    ->required()
+                    ->maxLength(128)
+                    ->columnSpanFull(),
+                TextInput::make('date_range')
                     ->required()
                     ->maxLength(128),
-                Forms\Components\TextInput::make('institude')
+                Select::make('status_id')
                     ->required()
-                    ->maxLength(128),
-                Forms\Components\TextInput::make('desc')
-                    ->required()
-                    ->maxLength(128),
-                Forms\Components\TextInput::make('date_range')
-                    ->required()
-                    ->maxLength(128),
-                Forms\Components\TextInput::make('status_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                Forms\Components\TextInput::make('updated_by')
-                    ->numeric(),
-                Forms\Components\TextInput::make('deleted_by')
-                    ->numeric(),
+                    ->label('Status')
+                    ->searchable()
+                    ->columnSpanFull()
+                    ->options(Status::where('status_type_id', 1)->pluck('name', 'id')),
             ]);
     }
 
