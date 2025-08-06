@@ -131,6 +131,12 @@ class ProjectResource extends Resource
                     ->label('Client'),
                 TextColumn::make('tools.name')
                     ->label('Tools'),
+                TextColumn::make('url')
+                    ->label('URL Project')
+                    ->searchable()
+                    ->badge()
+                    ->url(fn ($record) => $record->url, true)
+                    ->openUrlInNewTab(),
                 ImageColumn::make('thumbnail'),
                 ImageColumn::make('image'),
                 TextColumn::make('body')
