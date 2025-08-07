@@ -44,7 +44,7 @@ class HomeController extends Controller
             ['name' => 'Bootstrap', 'percentage' => 90, 'icon' => '/icons/bootstrap.svg', 'color' => 'purple'],
             ['name' => 'Jquery', 'percentage' => 80, 'icon' => '/icons/jquery.svg', 'color' => 'blue']
         ];
-        
+
         //get contact
         $contacts = Contact::get();
 
