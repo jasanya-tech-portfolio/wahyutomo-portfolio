@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\MyJourney;
-use App\Models\Project;
 use App\Models\Tools;
+use App\Models\Contact;
+use App\Models\Project;
+use App\Models\MyJourney;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -43,7 +44,27 @@ class HomeController extends Controller
             ['name' => 'Bootstrap', 'percentage' => 90, 'icon' => '/icons/bootstrap.svg', 'color' => 'purple'],
             ['name' => 'Jquery', 'percentage' => 80, 'icon' => '/icons/jquery.svg', 'color' => 'blue']
         ];
+        
+        //get contact
+        $contacts = Contact::get();
 
-        return view("pages.home", compact('tools', 'blogs', 'projects', 'experience', 'education', 'skills'));
+        return view("pages.home", compact('tools', 'blogs', 'projects', 'experience', 'education', 'skills', 'contacts'));
+    }
+
+    public function contact(Request $request)
+    {
+        //Validasi Data
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'budget' => 'required',
+            'massage' => 'required',
+        ]);
+
+        // Simpan data ke database
+        Contact::create($validated);
+
+        return redirect()->back()->with('success', 'Data kontak berhasil dikirim!');
     }
 }
