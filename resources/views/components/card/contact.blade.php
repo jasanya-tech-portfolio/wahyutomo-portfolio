@@ -111,56 +111,46 @@
 
     <!-- Right Column: Contact Form -->
     <div class="mt-8">
-        <div class="bg-white rounded-xl shadow-lg p-6 border border-emerald-500 mx-auto">
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 border border-emerald-600 mx-auto">
             {{-- <form method="POST" action="{{ route('hire.submit') }}" enctype="multipart/form-data" class="space-y-4"> --}}
                 @csrf
 
-                <!-- Service -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Select Service</label>
-                    <select name="service_id" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
-                        <option value="">Choose a service...</option>
-                        <option value="1">Landing Page</option>
-                        <!-- Tambah opsi sesuai kebutuhan -->
-                    </select>
-                </div>
-
+                {{-- Name And Email --}}
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Name</label>
-                        <input type="text" name="name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
+                        <label class="block text-sm font-semibold text-gray-700">Name</label>
+                        <input type="text" name="name" required 
+                                class="mt-1 px-3 py-2 block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" name="email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
+                        <label class="block text-sm font-semibold text-gray-700">Email</label>
+                        <input type="email" name="email" required 
+                                class="mt-1 px-3 py-2 block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
+                {{-- Phone And Budget --}}
+                <div class="grid grid-cols-2 gap-4 py-2">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Phone</label>
-                        <input type="tel" name="phone" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
+                        <label class="block text-sm font-semibold text-gray-700">Phone</label>
+                        <input type="tel" name="phone" 
+                                required class="mt-1 px-3 py-2 block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Budget</label>
-                        <input type="text" name="budget" placeholder="e.g. 1-2 million" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
+                        <label class="block text-sm font-semibold text-gray-700">Budget</label>
+                        <input type="text" name="budget" 
+                                placeholder="e.g. 1-2 million" 
+                                required class="mt-1 px-3 py-2 block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
                     </div>
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Project Description</label>
-                    <textarea name="project_description" rows="3" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Tell me about your project..."></textarea>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Deadline</label>
-                    <input type="date" name="deadline" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500 h-9">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Reference File (Optional)</label>
-                    <input type="file" name="reference_file" class="mt-1 block w-full text-sm text-gray-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-medium file:bg-emerald-50 file:text-emerald-600 hover:file:bg-emerald-100">
-                    <p class="mt-0.5 text-xs text-gray-500">Max. 10MB</p>
+                {{-- Massage --}}
+                <div class="py-4">
+                    <label class="block text-sm font-semibold text-gray-700">Project Description</label>
+                    <textarea name="project_description" 
+                                rows="3" required 
+                                class="mt-1 px-3 py-2  block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500" 
+                                placeholder="Tell me about your project..."></textarea>
                 </div>
 
                 <div>
