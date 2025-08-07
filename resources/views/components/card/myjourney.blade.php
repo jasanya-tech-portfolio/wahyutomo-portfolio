@@ -1,11 +1,11 @@
 <section class="max-w-7xl mx-auto px-4 lg:px-16 py-12 font-[Poppins]">
     {{-- Ping Bootom --}}
     <div class="flex justify-center py-2">
-        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-amber-600 font-semibold shadow-sm hover:shadow-md border-2 border-blue-100">
+        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-blue-600 font-semibold shadow-sm hover:shadow-md border-2 border-blue-100">
             <!--Ikon ping -->
             <div class="relative flex items-center justify-center w-4 h-4">
-                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
-                <span class="relative inline-flex w-3 h-3 rounded-full bg-amber-600"></span>
+                <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex w-3 h-3 rounded-full bg-blue-600"></span>
             </div>
             
             <!-- Teks -->

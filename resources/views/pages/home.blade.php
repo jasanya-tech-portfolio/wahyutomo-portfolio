@@ -14,10 +14,13 @@
         <x-card.count />
 
         {{-- Card Blog --}}
-        <x-card.blog :blogs="$blogs" />
+        {{-- <x-card.blog :blogs="$blogs" /> --}}
 
         {{-- Card Blog --}}
         <x-card.project :projects="$projects" :tools="$tools" />
+
+        {{-- Card Blog --}}
+        <x-card.contact />
 
         {{-- Card My Journey --}}
         <x-card.myjourney :education="$education" :experience="$experience" />
@@ -25,8 +28,6 @@
         {{-- Card My Journey --}}
         {{-- <x-card.progres-skill :tools="$tools" :skills="$skills" /> --}}
 
-        {{-- Card Blog --}}
-        <x-card.contact />
     </div>
 
     <!-- Progress Wrapper -->
