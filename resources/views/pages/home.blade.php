@@ -23,7 +23,10 @@
         <x-card.myjourney :education="$education" :experience="$experience" />
 
         {{-- Card My Journey --}}
-        <x-card.progres-skill :tools="$tools" :skills="$skills" />
+        {{-- <x-card.progres-skill :tools="$tools" :skills="$skills" /> --}}
+
+        {{-- Card Blog --}}
+        <x-card.contact />
     </div>
 
     <!-- Progress Wrapper -->
