@@ -147,12 +147,13 @@
                 {{-- Massage --}}
                 <div class="py-4">
                     <label class="block text-sm font-semibold text-gray-700">Project Description</label>
-                    <textarea name="project_description" 
+                    <textarea name="massage" 
                                 rows="3" required 
                                 class="mt-1 px-3 py-2  block w-full rounded-lg border-2 border-emerald-600 shadow-sm text-sm focus:ring-emerald-500 focus:border-emerald-500" 
                                 placeholder="Tell me about your project..."></textarea>
                 </div>
 
+                {{-- Submit --}}
                 <div>
                     <button type="submit" class="w-full flex justify-center items-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-medium shadow-lg hover:shadow-xl transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                         <span>Send Request</span>
@@ -161,6 +162,7 @@
                         </svg>
                     </button>
                 </div>
+
             </form>
         </div>
     </div>
