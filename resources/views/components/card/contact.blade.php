@@ -1,46 +1,111 @@
-<div class="lg:grid lg:grid-cols-2 lg:gap-12 items-start px-20 py-10 max-w-7xl mx-auto">
+<div class="lg:grid lg:grid-cols-2 lg:gap-12 items-start px-4 md:px-10 lg:px-24 py-10 max-w-7xl mx-auto font-[poppins]">
     <!-- Left Column: Info -->
     <div class="lg:sticky top-20">
         <div class="mb-4 lg:text-left text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur shadow-lg mb-4">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span class="text-sm font-medium bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                    Let's Work Together
-                </span>
+
+            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-green-600 font-semibold shadow-sm hover:shadow-md max-w-[250px] border-2 border-green-100">
+                <!--Ikon ping -->
+                <div class="relative flex items-center justify-center w-4 h-4">
+                    <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex w-3 h-3 rounded-full bg-green-600"></span>
+                </div>
+                
+                <!-- Teks -->
+                Let's Work Together
             </div>
-            <h2 class="lg:text-3xl text-2xl font-bold text-gray-900 mb-2">Start Your Project</h2>
-            <p class="text-gray-600 max-w-md mx-auto lg:mx-0">
+
+            <h2 class="lg:text-5xl text-3xl font-bold text-gray-900 mb-2 py-3 font-[Caveat]">Start Your <span class="text-green-600">Project</span></h2>
+            <p class="text-gray-800 max-w-md mx-auto lg:mx-0 text-sm lg:text-lg">
                 Tell me about your project and I'll help bring your vision to life with the best solutions and practices
             </p>
+
         </div>
 
         <!-- Benefits List -->
         <div class="space-y-4">
-            @php
-                $benefits = [
-                    ['title' => 'Professional Service', 'desc' => 'Get high-quality work delivered on time', 'icon' => 'check'],
-                    ['title' => 'Quick Response', 'desc' => 'Get response within 24 hours', 'icon' => 'clock'],
-                    ['title' => 'Secure Process', 'desc' => 'Your data and project details are fully protected', 'icon' => 'shield'],
-                    ['title' => 'Clear Communication', 'desc' => 'Regular updates and open discussion throughout the project', 'icon' => 'chat'],
-                    ['title' => 'Fast Delivery', 'desc' => 'Efficient workflow to meet your deadlines', 'icon' => 'lightning'],
-                    ['title' => 'Dedicated Support', 'desc' => 'Post-project support and maintenance available', 'icon' => 'book-open'],
-                ];
-            @endphp
-
-            @foreach($benefits as $item)
+            <!-- Item 1 -->
             <div class="flex items-start gap-3">
                 <div class="p-2 bg-emerald-50 rounded-lg">
-                    <x-icons.{{ $item['icon'] }} class="w-4 h-4 text-emerald-600" />
+                    <!-- Check Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900">{{ $item['title'] }}</h3>
-                    <p class="text-sm text-gray-600">{{ $item['desc'] }}</p>
+                    <h3 class="font-medium text-gray-900">Professional Service</h3>
+                    <p class="text-sm text-gray-600">Get high-quality work delivered on time</p>
                 </div>
             </div>
-            @endforeach
+
+            <!-- Item 2 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-emerald-50 rounded-lg">
+                    <!-- Clock Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">Quick Response</h3>
+                    <p class="text-sm text-gray-600">Get response within 24 hours</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-emerald-50 rounded-lg">
+                    <!-- Shield Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">Secure Process</h3>
+                    <p class="text-sm text-gray-600">Your data and project details are fully protected</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-emerald-50 rounded-lg">
+                    <!-- Chat Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">Clear Communication</h3>
+                    <p class="text-sm text-gray-600">Regular updates and open discussion throughout the project</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-emerald-50 rounded-lg">
+                    <!-- Lightning Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">Fast Delivery</h3>
+                    <p class="text-sm text-gray-600">Efficient workflow to meet your deadlines</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-emerald-50 rounded-lg">
+                    <!-- Book Icon -->
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">Dedicated Support</h3>
+                    <p class="text-sm text-gray-600">Post-project support and maintenance available</p>
+                </div>
+            </div>
         </div>
     </div>
 
