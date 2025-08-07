@@ -112,7 +112,7 @@
     <!-- Right Column: Contact Form -->
     <div class="mt-8">
         <div class="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 border border-emerald-600 mx-auto">
-            {{-- <form method="POST" action="{{ route('hire.submit') }}" enctype="multipart/form-data" class="space-y-4"> --}}
+            <form method="POST" action="{{ route('contact') }}" enctype="multipart/form-data" class="space-y-4">
                 @csrf
 
                 {{-- Name And Email --}}

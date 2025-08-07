@@ -17,3 +17,6 @@ Route::get('/cek-setting', function () {
 
 //route untyuk get data
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// create data contact
+Route::post('/submit-contact', [HomeController::class, 'contact'])->name('contact');
