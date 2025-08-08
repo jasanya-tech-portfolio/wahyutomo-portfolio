@@ -66,6 +66,8 @@ class ClientResource extends Resource
                 TextColumn::make('desc')
                     ->label('Description')
                     ->searchable(),
+                TextColumn::make('status.name')
+                    ->sortable(),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')
