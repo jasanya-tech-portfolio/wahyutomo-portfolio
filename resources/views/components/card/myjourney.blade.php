@@ -28,7 +28,7 @@
 
             <!-- Vertical Line -->
             <div class="relative">
-                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-violet-200 z-0"></div>
+                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-400 to-transparent z-0"></div>
 
                 <!-- Timeline Items -->
                 <div class="space-y-10">
@@ -36,7 +36,7 @@
                     <div class="relative group">
                         <!-- Dot -->
                         <div class="absolute left-4 top-2 -translate-x-1/2 w-3 h-3 z-10">
-                            <div class="w-full h-full rounded-full bg-violet-500 border-2 border-white shadow"></div>
+                            <div class="w-full h-full rounded-full bg-violet-600 border-2 border-white shadow"></div>
                         </div>
 
                         <!-- Badge -->
@@ -75,7 +75,7 @@
 
             <!-- Vertical Line -->
             <div class="relative">
-                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-violet-200 z-0"></div>
+                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-400 to-transparent z-0"></div>
 
                 <!-- Timeline Items -->
                 <div class="space-y-10">
@@ -83,7 +83,7 @@
                     <div class="relative group">
                         <!-- Dot -->
                         <div class="absolute left-4 top-2 -translate-x-1/2 w-3 h-3 z-10">
-                            <div class="w-full h-full rounded-full bg-violet-500 border-2 border-white shadow"></div>
+                            <div class="w-full h-full rounded-full bg-violet-600 border-2 border-white shadow"></div>
                         </div>
 
                         <!-- Badge -->
