@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="overflow-x-hidden">
+<html lang="id" class="overflow-x-hidden scroll-smooth">
     <head>
         <meta charset="UTF-8">
         <title>@yield('title', 'My App')</title>

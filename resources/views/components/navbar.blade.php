@@ -22,11 +22,11 @@
     {{-- Navigation Links --}}
     <ul
         id="menu"
-        class="px-10 space-x-6 text-gray-900 font-medium hidden lg:flex lg:justify-end lg:items-center"
+        class="px-10 space-x-8 text-gray-900 font-medium hidden lg:flex lg:justify-end lg:items-center"
     >
-        <li><a href="#" class="text-lg hover:text-amber-600 block py-2">Home</a></li>
-        <li><a href="#" class="text-lg hover:text-amber-600 block py-2">Works</a></li>
+        <li><a href="/" class="text-lg hover:text-amber-600 block py-2">Home</a></li>
+        <li><a href="#project" class="text-lg hover:text-amber-600 block py-2">Project</a></li>
         <li><a href="#" class="text-lg hover:text-amber-600 block py-2">Blog</a></li>
-        <li><a href="#" class="text-lg hover:text-amber-600 block py-2">Contact</a></li>
+        <li><a href="#contact" class="text-lg hover:text-amber-600 block py-2">Contact</a></li>
     </ul>
 </nav>
