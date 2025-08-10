@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>@yield('title', 'My App')</title>
+
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         <meta name="keywords"
             content="Tailwind CSS, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
         <meta name="author" content="elemis">
+
         @vite('resources/css/app.css')
         @vite('resources/js/navbar.js')
         {{-- <title>{{ $title ?? 'JASANYATECH' }}</title> --}}
@@ -18,7 +20,7 @@
         <link rel="shortcut icon" href="{{ asset('assets/img/icon_web.ico') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets') }}/fonts/unicons/unicons.css">
         <link rel="stylesheet" href="{{ asset('assets') }}/css/plugins.css">
-        <link rel="stylesheet" href="{{ asset('assets') }}/style.css">
+        {{-- <link rel="stylesheet" href="{{ asset('assets') }}/style.css"> --}}
         <link rel="stylesheet" href="{{ asset('assets') }}/css/colors/grape.css">
         <link rel="preload" href="{{ asset('assets') }}/css/fonts/space.css" as="style" onload="this.rel='stylesheet'">
         <style>
