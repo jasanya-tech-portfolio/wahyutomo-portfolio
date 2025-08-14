@@ -1,4 +1,4 @@
-<div class="py-5 px-5 lg:py-8 lg:px-12 mt-[64px]">
+<div class="bg-white py-5 px-5 lg:py-8 lg:px-12 mt-[64px]">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:py-5 item-center justify-center">
         
         {{-- Foto Hero --}}
