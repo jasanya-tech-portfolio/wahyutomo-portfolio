@@ -30,7 +30,7 @@
                     <a href="{{ route('project.show', $project->id) }}">
                         <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-72 lg:w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
                             <div class="overflow-hidden rounded-t-lg">
-                                <img src="{{ $project->thumbnail }}"
+                                <img src="{{ asset('storage/' . $project->thumbnail) }}"
                                     alt="Thumbnail"
                                     class="w-full h-40 md:h-48 object-cover transform transition-transform duration-300 hover:scale-110">
                             </div>
