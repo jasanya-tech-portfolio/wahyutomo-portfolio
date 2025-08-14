@@ -26,7 +26,7 @@
         <x-home.myjourney :education="$education" :experience="$experience" />
 
         {{-- Card My Journey --}}
-        <x-home.progres-skill :tools="$tools" :skills="$skills" />
+        <x-home.progres-skill :tools="$tools" />
 
         {{-- Component Testimonial
         <x-home.testimonial :tools="$tools" /> --}}
