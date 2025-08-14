@@ -28,6 +28,8 @@
         {{-- Card My Journey --}}
         {{-- <x-card.progres-skill :tools="$tools" :skills="$skills" /> --}}
 
+        {{-- Component Testimonial --}}
+        <x-home.testimonial />
     </div>
 
     <!-- Progress Wrapper -->
