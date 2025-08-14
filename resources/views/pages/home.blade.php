@@ -26,10 +26,10 @@
         <x-home.myjourney :education="$education" :experience="$experience" />
 
         {{-- Card My Journey --}}
-        {{-- <x-card.progres-skill :tools="$tools" :skills="$skills" /> --}}
+        <x-home.progres-skill :tools="$tools" :skills="$skills" />
 
-        {{-- Component Testimonial --}}
-        <x-home.testimonial />
+        {{-- Component Testimonial
+        <x-home.testimonial :tools="$tools" /> --}}
     </div>
 
     <!-- Progress Wrapper -->
@@ -90,5 +90,16 @@
             circle.style.strokeDashoffset = offset;
         });
     </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0V20M0 10H20" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/></svg>');
+            background-color: #f7fafc;
+        }
+        .dark body {
+            background-color: #1a202c;
+        }
+    </style>
 
 @endsection
