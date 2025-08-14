@@ -61,4 +61,40 @@
     </div>
     <!-- /.container -->
 </div>
+<div class="overflow-hidden relative w-full">
+    <div id="image-slider" class="flex transition-transform duration-700 ease-in-out">
+        @foreach($projects as $item)
+            @foreach(json_decode($item->image, true) as $img)
+                <img 
+                    src="{{ asset('storage/' . $img) }}" 
+                    alt="Thumbnail"
+                    class="flex-shrink-0 w-48 h-32 object-cover rounded-lg mx-2 transition-transform duration-300 hover:scale-105"
+                >
+            @endforeach
+        @endforeach
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ambil elemen slider dan semua gambar di dalamnya
+        const slider = document.getElementById('image-slider');
+        const images = slider.querySelectorAll('img');
+        const totalImages = images.length;
+        let currentIndex = 0;
+        
+        // Lebar pergeseran, dihitung dari lebar gambar (w-48 = 192px) ditambah margin kiri-kanan (mx-2 = 16px)
+        const scrollAmount = 192 + (8 * 2); // 208px
+
+        // Fungsi untuk menggeser gambar secara otomatis
+        setInterval(() => {
+            // Naikkan index, kembali ke 0 jika sudah mencapai gambar terakhir
+            currentIndex = (currentIndex + 1) % totalImages;
+            
+            // Hitung posisi baru dan terapkan ke slider
+            const newTransform = -currentIndex * scrollAmount;
+            slider.style.transform = `translateX(${newTransform}px)`;
+        }, 3000); // Ganti angka ini untuk mengubah interval (3000ms = 3 detik)
+    });
+</script>
 @endsection

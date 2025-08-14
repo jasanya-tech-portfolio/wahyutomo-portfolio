@@ -14,7 +14,9 @@ class ProjectController extends Controller
 
     public function showProject($id)
     {
-        $project = Project::findOrFail($id);  
-        return view('pages.projectshow', compact('project'));
+        $project = Project::with(['categories', 'client'])->findOrFail($id);
+        $projects = Project::where('id', '!=', $id)->get();
+
+        return view('pages.projectshow', compact('project', 'projects'));
     }
 }
