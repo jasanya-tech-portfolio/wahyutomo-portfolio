@@ -38,7 +38,7 @@
                         <div class="flex items-center space-x-2">
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
                                 <div id="{{ strtolower(str_replace([' ', '.'], ['-', ''], $tool->name)) }}-progress" 
-                                    class="progress-bar bg-amber-600 h-2.5 rounded-full" 
+                                    class="progress-bar h-2.5 rounded-full {{ 'bg-' . $tool->color . '-600' }}" 
                                     style="width: 0%">
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
 
 <!-- JavaScript for animation (unchanged for now, replace with dynamic data later) -->
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
         const skillsData = [
             @foreach($tools as $tool)
                 @if($tool->percentage !== null)
