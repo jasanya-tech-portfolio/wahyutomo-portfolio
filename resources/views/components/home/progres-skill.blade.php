@@ -18,8 +18,8 @@
             Professional Skills
         </h1>
 
-        <h3 class="text-sm md:text-lg text-gray-600 px-2 font-[poppins] font-medium text-center">
-            {{App\Helpers\SettingHelper::getSetting('text project')}}
+        <h3 class="text-sm md:text-lg text-gray-600 px-2 font-medium text-center">
+            {{App\Helpers\SettingHelper::getSetting('text progres')}}
         </h3>
 
         <!-- Skills Grid -->
@@ -29,7 +29,7 @@
                     <div class="w-1/3">
                         <div class="flex items-center space-x-2">
                             <!-- Icon and Name -->
-                            <i class="fa-brands {{ $tool->icon }} text-xl text-amber-600"></i>
+                            <img src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }} Logo" class="w-7 h-7 object-contain rounded" />
                             <span class="text-lg font-medium">{{ $tool->name }}</span>
                         </div>
                     </div>
