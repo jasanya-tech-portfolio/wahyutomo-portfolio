@@ -23,6 +23,7 @@ Route::get('/cek-setting', function () {
 //route untyuk get data
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
+Route::get('/project/{id}', [ProjectController::class, 'showProject'])->name('project.show');
 
 // create data contact
 Route::post('/submit-contact', [HomeController::class, 'contact'])->name('contact');
