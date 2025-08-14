@@ -1,16 +1,29 @@
-<section class="py-20 px-4 sm:px-6 lg:px-8">
+<section class="py-10 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto text-center">
-        <!-- Title and Subtitle -->
-        <div class="inline-block px-4 py-2 mb-4 bg-red-100 text-red-600 rounded-full font-semibold text-sm">
-            Technical Expertise
+        {{-- Ping Bottom --}}
+        <div class="flex justify-center pt-10">
+            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-red-600 font-semibold shadow-sm hover:shadow-md max-w-[230px] border-2 border-red-100">
+                <!--Ikon ping -->
+                <div class="relative flex items-center justify-center w-4 h-4">
+                    <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex w-3 h-3 rounded-full bg-red-600"></span>
+                </div>
+                
+                <!-- Teks -->
+                Technical Expertise
+            </div>
         </div>
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4">Professional Skills</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
-            Technologies and tools I've mastered throughout my journey
-        </p>
+
+        <h1 class="text-4xl md:text-5xl text-gray-800 font-[Caveat] font-semibold text-center py-6">
+            Professional Skills
+        </h1>
+
+        <h3 class="text-sm md:text-lg text-gray-600 px-2 font-[poppins] font-medium text-center">
+            {{App\Helpers\SettingHelper::getSetting('text project')}}
+        </h3>
 
         <!-- Skills Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-w-4xl mx-auto text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-w-4xl mx-auto text-left pt-8">
             @foreach($tools as $tool)
                 <div class="flex items-center space-x-4">
                     <div class="w-1/3">
