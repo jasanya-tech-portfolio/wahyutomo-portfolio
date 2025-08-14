@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('tools', function (Blueprint $table) {
             $table->string('percentage', 10);
+            $table->string('color', 10);
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('tools', function (Blueprint $table) {
             $table->string('percentage', 10);
+            $table->string('color', 10);
         });
     }
 };
