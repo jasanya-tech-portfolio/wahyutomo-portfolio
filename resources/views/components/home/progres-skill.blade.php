@@ -1,7 +1,7 @@
-<section class="py-10 px-4 sm:px-6 lg:px-8">
+<section class="py-6 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto text-center">
         {{-- Ping Bottom --}}
-        <div class="flex justify-center pt-10">
+        <div class="flex justify-center pt-2">
             <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-red-600 font-semibold shadow-sm hover:shadow-md max-w-[230px] border-2 border-red-100">
                 <!--Ikon ping -->
                 <div class="relative flex items-center justify-center w-4 h-4">
@@ -25,31 +25,29 @@
         <!-- Skills Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-w-4xl mx-auto text-left pt-8">
             @foreach($tools as $tool)
-                <div class="flex items-center space-x-4">
-                    <div class="w-1/3">
+                <div class="mb-4">
+                    <!-- Header: Icon + Nama (kiri), Persentase (kanan) -->
+                    <div class="flex justify-between items-center mb-2">
                         <div class="flex items-center space-x-2">
-                            <!-- Icon and Name -->
-                            <img src="{{ asset('storage/' . $tool->logo) }}" alt="{{ $tool->name }} Logo" class="w-7 h-7 object-contain rounded" />
-                            <span class="text-lg font-medium">{{ $tool->name }}</span>
+                            <img src="{{ asset('storage/' . $tool->logo) }}" 
+                                alt="{{ $tool->name }} Logo" 
+                                class="w-5 h-5 lg:w-7 lg:h-7 object-contain rounded" />
+                            <span class="text-sm lg:text-lg font-medium">{{ $tool->name }}</span>
                         </div>
+                        <span class="text-sm font-semibold text-gray-500">
+                            @if($tool->percentage !== null)
+                                {{ $tool->percentage }}%
+                            @else
+                                -
+                            @endif
+                        </span>
                     </div>
-                    <div class="w-2/3">
-                        <!-- Progress Bar -->
-                        <div class="flex items-center space-x-2">
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div id="{{ strtolower(str_replace([' ', '.'], ['-', ''], $tool->name)) }}-progress" 
-                                    class="progress-bar h-2.5 rounded-full {{ 'bg-' . $tool->color . '-600' }}" 
-                                    style="width: 0%">
-                                </div>
-                            </div>
-                            <!-- Percentage (Placeholder) -->
-                            <span class="text-sm font-semibold text-gray-500">
-                                @if($tool->percentage !== null)
-                                    {{ $tool->percentage }}%
-                                @else
-                                    -
-                                @endif
-                            </span>
+
+                    <!-- Progress bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="{{ strtolower(str_replace([' ', '.'], ['-', ''], $tool->name)) }}-progress" 
+                            class="h-2.5 rounded-full progress-bar {{ 'bg-' . $tool->color . '-600' }}" 
+                            style="width: 0%">
                         </div>
                     </div>
                 </div>
