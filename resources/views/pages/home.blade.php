@@ -93,9 +93,8 @@
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0V20M0 10H20" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/></svg>');
-            background-color: #f7fafc;
+            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0V20M0 10H20" stroke="%23e5e7eb" stroke-width="0.5"/></svg>');
+            background-color: #fff;
         }
         .dark body {
             background-color: #1a202c;
