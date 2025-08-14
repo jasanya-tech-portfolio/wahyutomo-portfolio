@@ -36,9 +36,9 @@
                     <div class="w-2/3">
                         <!-- Progress Bar -->
                         <div class="flex items-center space-x-2">
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
                                 <div id="{{ strtolower(str_replace([' ', '.'], ['-', ''], $tool->name)) }}-progress" 
-                                    class="progress-bar bg-{{ $tool->color }}-600 h-2.5 rounded-full" 
+                                    class="progress-bar bg-amber-600 h-2.5 rounded-full" 
                                     style="width: 0%">
                                 </div>
                             </div>
@@ -60,18 +60,13 @@
 
 <!-- JavaScript for animation (unchanged for now, replace with dynamic data later) -->
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Ganti dengan data skills yang sebenarnya jika tersedia dari database
+   document.addEventListener("DOMContentLoaded", () => {
         const skillsData = [
-            { id: "html-progress", value: 95 },
-            { id: "tailwind-progress", value: 90 },
-            { id: "laravel-progress", value: 90 },
-            { id: "php-progress", value: 90 },
-            { id: "filament-progress", value: 90 },
-            { id: "bootstrap-progress", value: 90 },
-            { id: "javascript-progress", value: 85 },
-            { id: "jquery-progress", value: 80 },
-            { id: "node-js-progress", value: 80 }
+            @foreach($tools as $tool)
+                @if($tool->percentage !== null)
+                    { id: "{{ strtolower(str_replace([' ', '.'], ['-', ''], $tool->name)) }}-progress", value: {{ $tool->percentage }} },
+                @endif
+            @endforeach
         ];
 
         skillsData.forEach(skill => {
@@ -84,3 +79,8 @@
         });
     });
 </script>
+<style>
+    .progress-bar {
+    transition: width 1s ease-in-out;
+}
+</style>
