@@ -27,7 +27,7 @@
         <div class="overflow-x-auto hide-scrollbar">
             <div class="flex space-x-6 w-max mx-auto">
                 @foreach ( $projects as $project )
-                    <a href="{{ route('project.show', $project->id) }}">
+                    {{-- <a href="{{ route('project.show', $project->id) }}"> --}}
                         <div class="bg-white rounded-lg shadow-md hover:shadow-lg overflow-hidden w-72 lg:w-80 flex-shrink-0 border-1 border-emerald-700 hover:border-emerald-800 font-[poppins]">
                             <div class="overflow-hidden rounded-t-lg">
                                 <img src="{{ asset('storage/' . $project->thumbnail) }}"
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                         </div>
-                    </a>
+                    {{-- </a> --}}
                 @endforeach
             </div>
         </div>
