@@ -44,6 +44,10 @@ class ToolsResource extends Resource
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(128),
+                TextInput::make('percentage')
+                    ->required()
+                    ->columnSpanFull()
+                    ->maxLength(10),
                 Textarea::make('desc')
                     ->label('Description')
                     ->columnSpan(2),
@@ -63,6 +67,7 @@ class ToolsResource extends Resource
                 ImageColumn::make('logo'),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('percentage'),
                 TextColumn::make('desc')
                     ->label('Description')
                     ->searchable(),
