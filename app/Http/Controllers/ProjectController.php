@@ -14,7 +14,7 @@ class ProjectController extends Controller
 
     public function showProject($id)
     {
-        $project = Project::findOrFail($id);  // Mencari blog berdasarkan ID // Mengambil 6 blog terbaru dengan pagination
-        return view('pages.projectshow', compact('project')); // Mengirimkan data blog ke view
+        $project = Project::findOrFail($id);  
+        return view('pages.projectshow', compact('project'));
     }
 }
