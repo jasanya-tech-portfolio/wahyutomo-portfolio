@@ -5,25 +5,25 @@
 @section('content')
     <div class="grow shrink-0">
         {{-- hero section --}}
-        <x-card.hero />
+        <x-home.hero />
 
         {{-- Card Tools --}}
-        <x-card.tools :tools="$tools" />
+        <x-home.tools :tools="$tools" />
 
         {{-- Card Tools --}}
-        <x-card.count />
+        <x-home.count />
 
         {{-- Card Blog --}}
         {{-- <x-card.blog :blogs="$blogs" /> --}}
 
         {{-- Card Blog --}}
-        <x-card.project :projects="$projects" :tools="$tools" />
+        <x-home.project :projects="$projects" :tools="$tools" />
 
         {{-- Card Blog --}}
-        <x-card.contact />
+        <x-home.contact />
 
         {{-- Card My Journey --}}
-        <x-card.myjourney :education="$education" :experience="$experience" />
+        <x-home.myjourney :education="$education" :experience="$experience" />
 
         {{-- Card My Journey --}}
         {{-- <x-card.progres-skill :tools="$tools" :skills="$skills" /> --}}
