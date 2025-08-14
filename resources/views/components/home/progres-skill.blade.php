@@ -1,8 +1,8 @@
 <section class="py-6 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto text-center">
         {{-- Ping Bottom --}}
-        <div class="flex justify-center pt-2">
-            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-red-600 font-semibold shadow-sm hover:shadow-md max-w-[230px] border-2 border-red-100">
+        <div class="flex justify-center pt-2 font-[Poppins]">
+            <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-red-600 font-semibold shadow-sm hover:shadow-md max-w-[250px] border-2 border-red-100">
                 <!--Ikon ping -->
                 <div class="relative flex items-center justify-center w-4 h-4">
                     <span class="absolute inline-flex w-full h-full animate-ping rounded-full bg-red-400 opacity-75"></span>

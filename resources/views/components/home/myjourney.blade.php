@@ -1,6 +1,6 @@
-<section class="max-w-7xl mx-auto px-4 lg:px-16 py-12 font-[Poppins]">
+<section class="max-w-7xl mx-auto px-4 lg:px-16 py-12">
     {{-- Ping Bootom --}}
-    <div class="flex justify-center py-2">
+    <div class="flex justify-center py-2 font-[Poppins]">
         <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-blue-600 font-semibold shadow-sm hover:shadow-md border-2 border-blue-100">
             <!--Ikon ping -->
             <div class="relative flex items-center justify-center w-4 h-4">
@@ -17,11 +17,11 @@
         My Journey
     </h1>
 
-    <h3 class="text-sm md:text-lg text-gray-700 px-2 font-[poppins] font-medium text-center py-2">
+    <h3 class="text-sm md:text-lg text-gray-600 px-2 font-medium text-center py-2">
         {{App\Helpers\SettingHelper::getSetting('text journey')}}
     </h3>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative font-[Poppins]">
         <!-- Education Column -->
         <div class="relative">
             <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center py-3">Education</h3>
