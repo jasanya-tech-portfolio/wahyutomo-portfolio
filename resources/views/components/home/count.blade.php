@@ -1,4 +1,4 @@
-<section class="flex justify-center wrapper !bg-[#ffffff] ">
+<section class="flex justify-center wrapper">
     <div class="container py-8">
         <div class="flex flex-wrap mx-[-15px]">
             <div class="xl:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">

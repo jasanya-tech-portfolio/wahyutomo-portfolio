@@ -1,5 +1,5 @@
 {{-- Ping Bottom --}}
-<div class="flex justify-center pt-2">
+<div class="flex justify-center pt-4">
     <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm text-blue-600 font-semibold shadow-sm hover:shadow-md max-w-[220px] border-2 border-blue-100">
         <!--Ikon ping -->
         <div class="relative flex items-center justify-center w-4 h-4">
@@ -13,7 +13,7 @@
 </div>
 
 {{-- Tools Logo --}}
-<section class="flex justify-center wrapper !bg-[#ffffff] wrapper-border mx-auto">
+<section class="flex justify-center wrapper wrapper-border mx-auto">
   <div class="container py-6">
     <div class="swiper-container clients !mb-0 relative z-10" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="2000" data-items-xxl="7" data-items-xl="7" data-items-lg="7" data-items-md="4" data-items-xs="2">
       <div class="swiper">
