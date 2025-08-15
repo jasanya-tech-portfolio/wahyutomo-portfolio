@@ -1,31 +1,21 @@
 version: "3.8"
 
 services:
-    # Service PHP
     app:
         build:
             context: .
             dockerfile: Dockerfile
         container_name: laravel_app
-        working_dir: /var/www
         volumes:
-            - .:/var/www
+            - .:/var/www/html
+        ports:
+            - "8080:80"
         networks:
             - laravel
 
-    #Servivce NPM
-    node:
-        image: node:20
-        working_dir: /var/www
-        volumes:
-            - .:/var/www
-        command: sh -c "npm install && npm run build"
-
-    # Service MySQL
     db:
         image: mysql:8.0
         container_name: laravel_db
-        restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: laravel
@@ -36,15 +26,27 @@ services:
         networks:
             - laravel
 
-    # Service Nginx
-    webserver:
-        image: nginx:alpine
-        container_name: laravel_nginx
+    # Service untuk phpMyAdmin
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: laravel_phpmyadmin
+        restart: unless-stopped
         ports:
             - "8080:80"
+        environment:
+            PMA_HOST: db
+            PMA_PORT: 3306
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+        networks:
+            - laravel-network
+
+    node:
+        image: node:22
+        container_name: laravel_node
+        working_dir: /var/www/html
         volumes:
-            - .:/var/www
-            - ./nginx/conf.d:/etc/nginx/conf.d
+            - .:/var/www/html
+        command: sh -c "npm install && npm run dev"
         networks:
             - laravel
 
