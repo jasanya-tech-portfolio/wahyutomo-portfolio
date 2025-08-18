@@ -9,5 +9,11 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/navbar.js": {
+    "file": "assets/navbar-BzyjszsU.js",
+    "name": "navbar",
+    "src": "resources/js/navbar.js",
+    "isEntry": true
   }
 }
